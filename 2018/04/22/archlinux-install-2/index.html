@@ -102,25 +102,25 @@
 
 
 
-  <meta name="description" content="#使用场景当有时候需要提交某些文档或代码到git上，其他忽略不提交，这时候白名单机制就用得上了。比如，一个项目project，如下： 123456$ lltotal 12drwxr-xr-x 2 turbo users 4096 Apr 22 16:13 exclude_folder/drwxr-xr-x 2 turbo users 4096 Apr 22 16:13 include_folder">
-<meta name="keywords" content="git">
+  <meta name="description" content="how to install archlinux development enviroment - part2  安装图像界面的前，请参考  基本系统安装篇   linux 图形界面基本分为gtk跟qt，类似gnome，weightlight 的有lxde、xfce4可供选择。个人偏向tiling  window的manager,以前装过lua写的awesome,后来选择i3，个人感觉i3更好用。">
+<meta name="keywords" content="archlinux,i3,urxvt,x240">
 <meta property="og:type" content="article">
-<meta property="og:title" content=".gitignore whilelist patterns">
-<meta property="og:url" content="http://turbochooo.github.io/2018/04/21/git-ignore-patterns/index.html">
+<meta property="og:title" content="archlinux-install-2">
+<meta property="og:url" content="http://turbochooo.github.io/2018/04/22/archlinux-install-2/index.html">
 <meta property="og:site_name" content="turbochoo&#39;s blog">
-<meta property="og:description" content="#使用场景当有时候需要提交某些文档或代码到git上，其他忽略不提交，这时候白名单机制就用得上了。比如，一个项目project，如下： 123456$ lltotal 12drwxr-xr-x 2 turbo users 4096 Apr 22 16:13 exclude_folder/drwxr-xr-x 2 turbo users 4096 Apr 22 16:13 include_folder">
+<meta property="og:description" content="how to install archlinux development enviroment - part2  安装图像界面的前，请参考  基本系统安装篇   linux 图形界面基本分为gtk跟qt，类似gnome，weightlight 的有lxde、xfce4可供选择。个人偏向tiling  window的manager,以前装过lua写的awesome,后来选择i3，个人感觉i3更好用。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-22T12:03:54.754Z">
+<meta property="og:updated_time" content="2018-04-22T17:25:56.788Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=".gitignore whilelist patterns">
-<meta name="twitter:description" content="#使用场景当有时候需要提交某些文档或代码到git上，其他忽略不提交，这时候白名单机制就用得上了。比如，一个项目project，如下： 123456$ lltotal 12drwxr-xr-x 2 turbo users 4096 Apr 22 16:13 exclude_folder/drwxr-xr-x 2 turbo users 4096 Apr 22 16:13 include_folder">
+<meta name="twitter:title" content="archlinux-install-2">
+<meta name="twitter:description" content="how to install archlinux development enviroment - part2  安装图像界面的前，请参考  基本系统安装篇   linux 图形界面基本分为gtk跟qt，类似gnome，weightlight 的有lxde、xfce4可供选择。个人偏向tiling  window的manager,以前装过lua写的awesome,后来选择i3，个人感觉i3更好用。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://turbochooo.github.io/2018/04/21/git-ignore-patterns/"/>
+  <link rel="canonical" href="http://turbochooo.github.io/2018/04/22/archlinux-install-2/"/>
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>.gitignore whilelist patterns | turbochoo's blog</title>
+  <title>archlinux-install-2 | turbochoo's blog</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/21/git-ignore-patterns/">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/22/archlinux-install-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="choo turbo">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">.gitignore whilelist patterns
+          <h1 class="post-title" itemprop="name headline">archlinux-install-2
               
             
           </h1>
@@ -344,7 +344,7 @@
                 
               
 
-              <time title="Created: 2018-04-21 18:22:31" itemprop="dateCreated datePublished" datetime="2018-04-21T18:22:31+08:00">2018-04-21</time>
+              <time title="Created: 2018-04-22 23:16:55" itemprop="dateCreated datePublished" datetime="2018-04-22T23:16:55+08:00">2018-04-22</time>
             
 
             
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-04-22 20:03:54" itemprop="dateModified" datetime="2018-04-22T20:03:54+08:00">2018-04-22</time>
+                <time title="Modified: 2018-04-23 01:25:56" itemprop="dateModified" datetime="2018-04-23T01:25:56+08:00">2018-04-23</time>
               
             
           </span>
@@ -378,7 +378,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
 
                 
                 
@@ -412,21 +412,38 @@
       
 
       
-        <p>#使用场景<br>当有时候需要提交某些文档或代码到git上，其他忽略不提交，这时候白名单机制就用得上了。比如，一个项目project，如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ll</span><br><span class="line">total 12</span><br><span class="line">drwxr-xr-x 2 turbo users 4096 Apr 22 16:13 exclude_folder/</span><br><span class="line">drwxr-xr-x 2 turbo users 4096 Apr 22 16:13 include_folder/</span><br><span class="line">-rw-r--r-- 1 turbo users    0 Apr 22 16:12 exclude_file</span><br><span class="line">-rw-r--r-- 1 turbo users    7 Apr 22 16:12 include_file</span><br></pre></td></tr></table></figure>
-<p>需要将include_file文件以及include_folder下所有文件放到git里面，其他排除（exclude_folder， exclude_file），.gitignore 文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>排除所有</span><br><span class="line">/*</span><br><span class="line"><span class="meta">#</span>反选     </span><br><span class="line">!/include_folder/**</span><br><span class="line">!include_file</span><br><span class="line">!.gitignore</span><br></pre></td></tr></table></figure>
-<p>注意：.gitignore文件得加上。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>git status                                            </span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">No commits yet</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use "git add &lt;file&gt;..." to include in what will be committed)</span><br><span class="line"></span><br><span class="line">	.gitignore</span><br><span class="line">	include_file</span><br><span class="line">	include_folder/</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present (use "git add" to track)</span><br></pre></td></tr></table></figure></p>
-<p>可以看到， git 只会添加 include_file文件与include_folder目录。</p>
-<p>好了，我们先来了解 gitignore这个文件的语法,跟正则语法类似<br>，这边只说下该场景用到的标识：</p>
+        <h1 id="how-to-install-archlinux-development-enviroment-part2"><a href="#how-to-install-archlinux-development-enviroment-part2" class="headerlink" title="how to install archlinux development enviroment - part2"></a>how to install archlinux development enviroment - part2</h1><p>  安装图像界面的前，请参考<br>  <a href="/2018/04/22/archlinux-install/" title="install-archlinux-part1">基本系统安装篇</a></p>
+<p>  linux 图形界面基本分为gtk跟qt，类似gnome，weightlight 的有lxde、xfce4可供选择。个人偏向tiling<br>  window的manager,以前装过lua写的awesome,后来选择i3，个人感觉i3更好用。</p>
+<h2 id="一、图形涉及的软件包"><a href="#一、图形涉及的软件包" class="headerlink" title="一、图形涉及的软件包"></a>一、图形涉及的软件包</h2><p>  本机使用的intel的芯片 选择 xf86-video-intel，nVidia安装xf86-video-nouveau即可<br>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> sudo pacman -S xorg-server xorg-xinit xorg-server-utils mesa xf86-video-intel opencl-mesa xorg-twm xorg-xclock xorg-xprop xorg-xev xorg-xkill xorg-xfontsel xorg-xcalc redshift xbacklight acpid acpi</span><br></pre></td></tr></table></figure></p>
+<p>  <strong>说明</strong>：</p>
+<blockquote>
 <ol>
-<li>#开头为注释</li>
-<li>!开头标识非，gitignore文件本身也是非的意思，所以该行就是一条白名单规则</li>
-<li>*<em> 标识为匹配目录下所有目录跟文件，单个</em>标识为单层目录</li>
-<li>/为目录分割符</li>
+<li>xorg-xev 用于捕获按键的keycode, 方便用于设置key map</li>
+<li>xorg-xprop 用于捕获程序的class name,方便用于设置i3</li>
 </ol>
-<p><a href="http://git-scm.com/docs/gitignore" target="_blank" rel="noopener">具体参考git官方文档</a></p>
-
+</blockquote>
+<h2 id="二、字体、theme"><a href="#二、字体、theme" class="headerlink" title="二、字体、theme"></a>二、字体、theme</h2>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> sudo pacman -S wqy-microhei dina-font ttf-dejavu noto-fonts-emoji nerd-fonts-complete adobe-source-code-pro-fonts</span><br><span class="line"><span class="meta">$</span> sudo pacman -S arc-gtk-theme arc-icon-theme zsh-theme-powerlevel9k</span><br></pre></td></tr></table></figure>
+<p>  <strong>说明</strong>：</p>
+<blockquote>
+<ol>
+<li>arc theme 个人感觉比较清爽</li>
+<li>nerd-fonts-complete、powerlevel9k 主要用于zsh</li>
+<li>启动图形界面的时候加入中文支持，避免乱码(命令行界面支持中文输出安装fbterm)</li>
+<li>推荐 wqy-microhei 作为系统默认字体，谁用谁知道</li>
+</ol>
+</blockquote>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">打开~/.xprofile文件加入以下几行即可，注意文件名称全部是小写的。</span><br><span class="line"></span><br><span class="line">export LANG=en_US.UTF-8</span><br><span class="line">export LANGUAGE=zh_CN:en_US</span><br><span class="line">export LC_CTYPE=zh_CN.UTF-8</span><br></pre></td></tr></table></figure>
+<h2 id="三、基本软件"><a href="#三、基本软件" class="headerlink" title="三、基本软件"></a>三、基本软件</h2><h3 id="1-i3-wm-window-manager"><a href="#1-i3-wm-window-manager" class="headerlink" title="1. i3 wm (window manager)"></a>1. i3 wm (window manager)</h3>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S i3blocks i3-gaps i3lock i3status  ssh-agent gnome-keyring x11-ssh-askpass keychain</span><br><span class="line">cp /etc/X11/xinit/xinitrc ~/.xinitrc</span><br><span class="line">echo 'exec ssh-agent i3 &gt;~/.xsession-errors 2&gt;&amp;1' &gt;&gt; ~/.xinitrc</span><br></pre></td></tr></table></figure>
+<p>  <strong>登录窗口</strong>,我习惯命令行敲入 startx进入。有slim openbox 可选安装</p>
+<h3 id="2-输入法"><a href="#2-输入法" class="headerlink" title="2. 输入法"></a>2. 输入法</h3><pre><code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> sudo pacman -S ibus rime</span><br><span class="line"></span><br><span class="line"><span class="meta"> #</span> 让系统支持中文输入</span><br><span class="line">将以下 放入 ~/.xprofile 文件内                               </span><br><span class="line">export LANG=en_US.UTF-8</span><br><span class="line">export LC_CTYPE=zh_CN.UTF-8</span><br><span class="line"></span><br><span class="line">export XMODIFIERS=@im=IBUS</span><br><span class="line">export GTK_IM_MODULE="ibus"</span><br><span class="line">export QT_IM_MODULE="ibus"</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="3-terminal软件"><a href="#3-terminal软件" class="headerlink" title="3 terminal软件"></a>3 terminal软件</h3><pre><code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S terminator termite xterm rxvt-unicode urxvt-perls</span><br></pre></td></tr></table></figure>
+</code></pre><p><a href="https://github.com/turbochoo/dotfiles/blob/master/.Xresources" target="_blank" rel="noopener">urxvt、xterm配置</a> </p>
+<h3 id="4-浏览器"><a href="#4-浏览器" class="headerlink" title="4. 浏览器"></a>4. 浏览器</h3><h3 id="5-社交"><a href="#5-社交" class="headerlink" title="5. 社交"></a>5. 社交</h3><h3 id="6-文档、图片"><a href="#6-文档、图片" class="headerlink" title="6. 文档、图片"></a>6. 文档、图片</h3><h3 id="7-其他"><a href="#7-其他" class="headerlink" title="7. 其他"></a>7. 其他</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- ntfs-3g 挂载ntfs系统</span><br><span class="line">- feh 命令行查看图片，背景轮播工具</span><br><span class="line">-</span><br></pre></td></tr></table></figure>
+<h3 id="四-screenshoot"><a href="#四-screenshoot" class="headerlink" title="四 screenshoot"></a>四 screenshoot</h3><pre><code>1.  dirty
+  ![截图1](https://github.com/turbochoo/files/blob/master/2018-04-23-005908_731x433_scrot.png)
+2.  clear
+3. ![截图2](https://github.com/turbochoo/files/blob/master/2018-04-19-111842_1366x768_scrot.png)
+</code></pre>
       
     </div>
 
@@ -446,7 +463,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"># git</a>
+            <a href="/tags/archlinux/" rel="tag"># archlinux</a>
+          
+            <a href="/tags/i3/" rel="tag"># i3</a>
+          
+            <a href="/tags/urxvt/" rel="tag"># urxvt</a>
+          
+            <a href="/tags/x240/" rel="tag"># x240</a>
           
         </div>
       
@@ -459,14 +482,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/04/22/archlinux-install/" rel="next" title="archlinux-install">
+                <i class="fa fa-chevron-left"></i> archlinux-install
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/22/archlinux-install/" rel="prev" title="archlinux-install">
-                archlinux-install <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/22/archlinux-install-3/" rel="prev" title="archlinux-install-3">
+                archlinux-install-3 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -516,8 +543,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -615,6 +651,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#how-to-install-archlinux-development-enviroment-part2"><span class="nav-number">1.</span> <span class="nav-text">how to install archlinux development enviroment - part2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、图形涉及的软件包"><span class="nav-number">1.1.</span> <span class="nav-text">一、图形涉及的软件包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、字体、theme"><span class="nav-number">1.2.</span> <span class="nav-text">二、字体、theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、基本软件"><span class="nav-number">1.3.</span> <span class="nav-text">三、基本软件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-i3-wm-window-manager"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. i3 wm (window manager)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-输入法"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. 输入法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-terminal软件"><span class="nav-number">1.3.3.</span> <span class="nav-text">3 terminal软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-浏览器"><span class="nav-number">1.3.4.</span> <span class="nav-text">4. 浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-社交"><span class="nav-number">1.3.5.</span> <span class="nav-text">5. 社交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-文档、图片"><span class="nav-number">1.3.6.</span> <span class="nav-text">6. 文档、图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-其他"><span class="nav-number">1.3.7.</span> <span class="nav-text">7. 其他</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-screenshoot"><span class="nav-number">1.3.8.</span> <span class="nav-text">四 screenshoot</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

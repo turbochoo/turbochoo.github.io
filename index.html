@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/22/archlinux-install/">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/23/pacman/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="choo turbo">
@@ -318,8 +318,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/22/archlinux-install/" itemprop="url">
-                  archlinux-install
+                <a class="post-title-link" href="/2018/04/23/pacman/" itemprop="url">
+                  pacman
                 </a>
               
             
@@ -345,7 +345,7 @@
                 
               
 
-              <time title="Created: 2018-04-22 20:05:07 / Modified: 23:13:20" itemprop="dateCreated datePublished" datetime="2018-04-22T20:05:07+08:00">2018-04-22</time>
+              <time title="Created: 2018-04-23 01:28:34 / Modified: 01:30:48" itemprop="dateCreated datePublished" datetime="2018-04-23T01:28:34+08:00">2018-04-23</time>
             
 
             
@@ -403,7 +403,548 @@
       
         
           
-            <h1 id="how-to-install-archlinux-development-enviroment-part1"><a href="#how-to-install-archlinux-development-enviroment-part1" class="headerlink" title="how to install archlinux development enviroment - part1"></a>how to install archlinux development enviroment - part1</h1><p>参考了archlinux 官网、各路大神等的配置，定制化了适合自己的开发环境。记录下,方便以后回顾。用了多年的macAIR发热量大的，让x240重获升级, 安装完后居然温度稳定在49~54度，一点都不烫手，性能表现不错，很满意(thinkpad 跟linux 绝配)！</p>
+            <h1 id="arch-常用pacman-命令备忘"><a href="#arch-常用pacman-命令备忘" class="headerlink" title="arch 常用pacman 命令备忘"></a>arch 常用pacman 命令备忘</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 列出已安装包列表</span><br><span class="line">pacman -Qe</span><br><span class="line"><span class="meta">#</span> 列出已安装但不被依赖的包</span><br><span class="line">pacman -Qent</span><br><span class="line"><span class="meta">#</span> 列出手动安装的包</span><br><span class="line">pacman -Qm</span><br><span class="line"><span class="meta">#</span> 列出所有本地包</span><br><span class="line">pacman -Qn</span><br><span class="line"><span class="meta">#</span> 列出正则匹配到的包</span><br><span class="line">pacman -Qs &lt;regex&gt;</span><br><span class="line"><span class="meta">#</span> 列出正则匹配到的包，并以特定格式输出(需要`expac`)</span><br><span class="line">expac -s "%-30n %v" regex</span><br><span class="line"><span class="meta">#</span> 删除孤儿包</span><br><span class="line">pacman -Rns $(pacman -Qtdq)</span><br><span class="line"><span class="meta">#</span> 列出修改过的配置文件（备份用）</span><br><span class="line">pacman -Qii | awk '/^MODIFIED/ &#123;print $2&#125;'</span><br></pre></td></tr></table></figure>
+<p><a href="收集来源与网络">^c14c55e2</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/22/archlinux-install-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="choo turbo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="turbochoo's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/22/archlinux-install-3/" itemprop="url">
+                  archlinux-install-3
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-04-22 23:17:00" itemprop="dateCreated datePublished" datetime="2018-04-22T23:17:00+08:00">2018-04-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-04-23 01:30:53" itemprop="dateModified" datetime="2018-04-23T01:30:53+08:00">2018-04-23</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="how-to-install-archlinux-development-enviroment-part3"><a href="#how-to-install-archlinux-development-enviroment-part3" class="headerlink" title="how to install archlinux development enviroment - part3"></a>how to install archlinux development enviroment - part3</h1><p>  开发环境依赖图形界面，请先参考<a href="/2018/04/22/archlinux-install-2/" title="图形界面">图形界面配置篇</a></p>
+<h1 id="一、-c-环境"><a href="#一、-c-环境" class="headerlink" title="一、 c++环境"></a>一、 c++环境</h1><h1 id="二、python环境"><a href="#二、python环境" class="headerlink" title="二、python环境"></a>二、python环境</h1><h1 id="三、web开发环境"><a href="#三、web开发环境" class="headerlink" title="三、web开发环境"></a>三、web开发环境</h1>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/22/archlinux-install-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="choo turbo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="turbochoo's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/22/archlinux-install-2/" itemprop="url">
+                  archlinux-install-2
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-04-22 23:16:55" itemprop="dateCreated datePublished" datetime="2018-04-22T23:16:55+08:00">2018-04-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-04-23 01:25:56" itemprop="dateModified" datetime="2018-04-23T01:25:56+08:00">2018-04-23</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="how-to-install-archlinux-development-enviroment-part2"><a href="#how-to-install-archlinux-development-enviroment-part2" class="headerlink" title="how to install archlinux development enviroment - part2"></a>how to install archlinux development enviroment - part2</h1><p>  安装图像界面的前，请参考<br>  <a href="/2018/04/22/archlinux-install/" title="install-archlinux-part1">基本系统安装篇</a></p>
+<p>  linux 图形界面基本分为gtk跟qt，类似gnome，weightlight 的有lxde、xfce4可供选择。个人偏向tiling<br>  window的manager,以前装过lua写的awesome,后来选择i3，个人感觉i3更好用。</p>
+<h2 id="一、图形涉及的软件包"><a href="#一、图形涉及的软件包" class="headerlink" title="一、图形涉及的软件包"></a>一、图形涉及的软件包</h2><p>  本机使用的intel的芯片 选择 xf86-video-intel，nVidia安装xf86-video-nouveau即可<br>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> sudo pacman -S xorg-server xorg-xinit xorg-server-utils mesa xf86-video-intel opencl-mesa xorg-twm xorg-xclock xorg-xprop xorg-xev xorg-xkill xorg-xfontsel xorg-xcalc redshift xbacklight acpid acpi</span><br></pre></td></tr></table></figure></p>
+<p>  <strong>说明</strong>：</p>
+<blockquote>
+<ol>
+<li>xorg-xev 用于捕获按键的keycode, 方便用于设置key map</li>
+<li>xorg-xprop 用于捕获程序的class name,方便用于设置i3</li>
+</ol>
+</blockquote>
+<h2 id="二、字体、theme"><a href="#二、字体、theme" class="headerlink" title="二、字体、theme"></a>二、字体、theme</h2>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> sudo pacman -S wqy-microhei dina-font ttf-dejavu noto-fonts-emoji nerd-fonts-complete adobe-source-code-pro-fonts</span><br><span class="line"><span class="meta">$</span> sudo pacman -S arc-gtk-theme arc-icon-theme zsh-theme-powerlevel9k</span><br></pre></td></tr></table></figure>
+<p>  <strong>说明</strong>：</p>
+<blockquote>
+<ol>
+<li>arc theme 个人感觉比较清爽</li>
+<li>nerd-fonts-complete、powerlevel9k 主要用于zsh</li>
+<li>启动图形界面的时候加入中文支持，避免乱码(命令行界面支持中文输出安装fbterm)</li>
+<li>推荐 wqy-microhei 作为系统默认字体，谁用谁知道</li>
+</ol>
+</blockquote>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">打开~/.xprofile文件加入以下几行即可，注意文件名称全部是小写的。</span><br><span class="line"></span><br><span class="line">export LANG=en_US.UTF-8</span><br><span class="line">export LANGUAGE=zh_CN:en_US</span><br><span class="line">export LC_CTYPE=zh_CN.UTF-8</span><br></pre></td></tr></table></figure>
+<h2 id="三、基本软件"><a href="#三、基本软件" class="headerlink" title="三、基本软件"></a>三、基本软件</h2><h3 id="1-i3-wm-window-manager"><a href="#1-i3-wm-window-manager" class="headerlink" title="1. i3 wm (window manager)"></a>1. i3 wm (window manager)</h3>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S i3blocks i3-gaps i3lock i3status  ssh-agent gnome-keyring x11-ssh-askpass keychain</span><br><span class="line">cp /etc/X11/xinit/xinitrc ~/.xinitrc</span><br><span class="line">echo 'exec ssh-agent i3 &gt;~/.xsession-errors 2&gt;&amp;1' &gt;&gt; ~/.xinitrc</span><br></pre></td></tr></table></figure>
+<p>  <strong>登录窗口</strong>,我习惯命令行敲入 startx进入。有slim openbox 可选安装</p>
+<h3 id="2-输入法"><a href="#2-输入法" class="headerlink" title="2. 输入法"></a>2. 输入法</h3><pre><code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> sudo pacman -S ibus rime</span><br><span class="line"></span><br><span class="line"><span class="meta"> #</span> 让系统支持中文输入</span><br><span class="line">将以下 放入 ~/.xprofile 文件内                               </span><br><span class="line">export LANG=en_US.UTF-8</span><br><span class="line">export LC_CTYPE=zh_CN.UTF-8</span><br><span class="line"></span><br><span class="line">export XMODIFIERS=@im=IBUS</span><br><span class="line">export GTK_IM_MODULE="ibus"</span><br><span class="line">export QT_IM_MODULE="ibus"</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="3-terminal软件"><a href="#3-terminal软件" class="headerlink" title="3 terminal软件"></a>3 terminal软件</h3><pre><code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S terminator termite xterm rxvt-unicode urxvt-perls</span><br></pre></td></tr></table></figure>
+</code></pre><p><a href="https://github.com/turbochoo/dotfiles/blob/master/.Xresources" target="_blank" rel="noopener">urxvt、xterm配置</a> </p>
+<h3 id="4-浏览器"><a href="#4-浏览器" class="headerlink" title="4. 浏览器"></a>4. 浏览器</h3><h3 id="5-社交"><a href="#5-社交" class="headerlink" title="5. 社交"></a>5. 社交</h3><h3 id="6-文档、图片"><a href="#6-文档、图片" class="headerlink" title="6. 文档、图片"></a>6. 文档、图片</h3><h3 id="7-其他"><a href="#7-其他" class="headerlink" title="7. 其他"></a>7. 其他</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- ntfs-3g 挂载ntfs系统</span><br><span class="line">- feh 命令行查看图片，背景轮播工具</span><br><span class="line">-</span><br></pre></td></tr></table></figure>
+<h3 id="四-screenshoot"><a href="#四-screenshoot" class="headerlink" title="四 screenshoot"></a>四 screenshoot</h3><pre><code>1.  dirty
+  ![截图1](https://github.com/turbochoo/files/blob/master/2018-04-23-005908_731x433_scrot.png)
+2.  clear
+3. ![截图2](https://github.com/turbochoo/files/blob/master/2018-04-19-111842_1366x768_scrot.png)
+</code></pre>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/22/archlinux-install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="choo turbo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="turbochoo's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/22/archlinux-install/" itemprop="url">
+                  archlinux-install
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-04-22 20:05:07" itemprop="dateCreated datePublished" datetime="2018-04-22T20:05:07+08:00">2018-04-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-04-23 00:36:06" itemprop="dateModified" datetime="2018-04-23T00:36:06+08:00">2018-04-23</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="how-to-install-archlinux-development-enviroment-part1"><a href="#how-to-install-archlinux-development-enviroment-part1" class="headerlink" title="how to install archlinux development enviroment - part1"></a>how to install archlinux development enviroment - part1</h1><p>参考了archlinux 官网、各路大神等的配置，定制化了适合自己的开发环境。记录下,方便以后回顾。用了多年的macAIR发热量大的，让x240重新生, 安装完后居然温度稳定在49~54度，一点都不烫手，性能表现不错，很满意(thinkpad 跟linux 绝配)！</p>
 <h2 id="硬件配置如下："><a href="#硬件配置如下：" class="headerlink" title="硬件配置如下："></a>硬件配置如下：</h2><ul>
 <li>thinkpadx240</li>
 <li>8G ram</li>
@@ -458,9 +999,9 @@
 <li>设置 添加 /etc/pacman.conf<br>打开 multilib 项<br>添加archlinuxcn 源</li>
 </ul>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[archlinuxcn]</span></span><br><span class="line"><span class="string">SigLevel</span> <span class="string">=</span> <span class="string">Optional</span> <span class="string">TrustedOnly</span></span><br><span class="line"><span class="string">Server</span> <span class="string">=</span> <span class="attr">http://mirrors.163.com/archlinux-cn/$arch</span></span><br></pre></td></tr></table></figure>
-<p>更新安装包</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S multilib-devel</span><br><span class="line">sudo pacman -Syu</span><br></pre></td></tr></table></figure>
-<p>到这一步系统基本已经安装好。</p>
+<p>更新，并安装 archlinuxcn keyring </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Syu</span><br><span class="line">sudo pacman -S multilib-devel archlinuxcn-keyring</span><br></pre></td></tr></table></figure>
+<p>到这一步系统基本已经安装好。接下来进入 <a href="/2018/04/22/archlinux-install-2/" title="图形界面篇">图形界面篇</a></p>
 </li>
 </ol>
 
@@ -727,7 +1268,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -763,7 +1304,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
