@@ -110,7 +110,7 @@
 <meta property="og:site_name" content="turbochoo&#39;s blog">
 <meta property="og:description" content="arch 常用pacman 命令备忘12345678910111213141516# 列出已安装包列表pacman -Qe# 列出已安装但不被依赖的包pacman -Qent# 列出手动安装的包pacman -Qm# 列出所有本地包pacman -Qn# 列出正则匹配到的包pacman -Qs &amp;lt;regex&amp;gt;# 列出正则匹配到的包，并以特定格式输出(需要`expac`)expac -s">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-22T17:30:48.221Z">
+<meta property="og:updated_time" content="2018-04-22T17:44:39.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pacman">
 <meta name="twitter:description" content="arch 常用pacman 命令备忘12345678910111213141516# 列出已安装包列表pacman -Qe# 列出已安装但不被依赖的包pacman -Qent# 列出手动安装的包pacman -Qm# 列出所有本地包pacman -Qn# 列出正则匹配到的包pacman -Qs &amp;lt;regex&amp;gt;# 列出正则匹配到的包，并以特定格式输出(需要`expac`)expac -s">
@@ -344,7 +344,7 @@
                 
               
 
-              <time title="Created: 2018-04-23 01:28:34 / Modified: 01:30:48" itemprop="dateCreated datePublished" datetime="2018-04-23T01:28:34+08:00">2018-04-23</time>
+              <time title="Created: 2018-04-23 01:28:34 / Modified: 01:44:39" itemprop="dateCreated datePublished" datetime="2018-04-23T01:28:34+08:00">2018-04-23</time>
             
 
             
@@ -401,7 +401,9 @@
 
       
         <h1 id="arch-常用pacman-命令备忘"><a href="#arch-常用pacman-命令备忘" class="headerlink" title="arch 常用pacman 命令备忘"></a>arch 常用pacman 命令备忘</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 列出已安装包列表</span><br><span class="line">pacman -Qe</span><br><span class="line"><span class="meta">#</span> 列出已安装但不被依赖的包</span><br><span class="line">pacman -Qent</span><br><span class="line"><span class="meta">#</span> 列出手动安装的包</span><br><span class="line">pacman -Qm</span><br><span class="line"><span class="meta">#</span> 列出所有本地包</span><br><span class="line">pacman -Qn</span><br><span class="line"><span class="meta">#</span> 列出正则匹配到的包</span><br><span class="line">pacman -Qs &lt;regex&gt;</span><br><span class="line"><span class="meta">#</span> 列出正则匹配到的包，并以特定格式输出(需要`expac`)</span><br><span class="line">expac -s "%-30n %v" regex</span><br><span class="line"><span class="meta">#</span> 删除孤儿包</span><br><span class="line">pacman -Rns $(pacman -Qtdq)</span><br><span class="line"><span class="meta">#</span> 列出修改过的配置文件（备份用）</span><br><span class="line">pacman -Qii | awk '/^MODIFIED/ &#123;print $2&#125;'</span><br></pre></td></tr></table></figure>
-<p><a href="收集来源与网络">^c14c55e2</a></p>
+<blockquote>
+<p>来源网络收集</p>
+</blockquote>
 
       
     </div>
@@ -446,6 +448,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/23/devops/" rel="prev" title="devops">
+                devops <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -519,7 +525,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -536,7 +542,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -567,7 +575,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
