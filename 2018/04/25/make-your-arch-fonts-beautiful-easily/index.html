@@ -102,25 +102,25 @@
 
 
 
-  <meta name="description" content="arch 常用pacman 命令备忘12345678910111213141516# 列出已安装包列表pacman -Qe# 列出已安装但不被依赖的包pacman -Qent# 列出手动安装的包pacman -Qm# 列出所有本地包pacman -Qn# 列出正则匹配到的包pacman -Qs &amp;lt;regex&amp;gt;# 列出正则匹配到的包，并以特定格式输出(需要`expac`)expac -s">
-<meta name="keywords" content="archlinux,pacman">
+  <meta name="description" content="让你的linux 字体更好看，不用安装 其他工具。安装了多种字体后，qt gtk 以及基于election的程序字体不一致，得一个个去配置。逛reddit看到的一个帖子现在，直接按照如下命令 进行修改，reboot 即可,马上呈现一致的字体(用 lxappearance 不能完全将系统字体进行统一) 。 12345678910111213141516171819202122232425262728">
+<meta name="keywords" content="linux,arch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pacman">
-<meta property="og:url" content="http://turbochooo.github.io/2018/04/23/pacman/index.html">
+<meta property="og:title" content="make_your_arch_fonts_beautiful_easily">
+<meta property="og:url" content="http://turbochooo.github.io/2018/04/25/make-your-arch-fonts-beautiful-easily/index.html">
 <meta property="og:site_name" content="turbochoo&#39;s blog">
-<meta property="og:description" content="arch 常用pacman 命令备忘12345678910111213141516# 列出已安装包列表pacman -Qe# 列出已安装但不被依赖的包pacman -Qent# 列出手动安装的包pacman -Qm# 列出所有本地包pacman -Qn# 列出正则匹配到的包pacman -Qs &amp;lt;regex&amp;gt;# 列出正则匹配到的包，并以特定格式输出(需要`expac`)expac -s">
+<meta property="og:description" content="让你的linux 字体更好看，不用安装 其他工具。安装了多种字体后，qt gtk 以及基于election的程序字体不一致，得一个个去配置。逛reddit看到的一个帖子现在，直接按照如下命令 进行修改，reboot 即可,马上呈现一致的字体(用 lxappearance 不能完全将系统字体进行统一) 。 12345678910111213141516171819202122232425262728">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-22T17:44:39.177Z">
+<meta property="og:updated_time" content="2018-04-25T15:18:23.132Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pacman">
-<meta name="twitter:description" content="arch 常用pacman 命令备忘12345678910111213141516# 列出已安装包列表pacman -Qe# 列出已安装但不被依赖的包pacman -Qent# 列出手动安装的包pacman -Qm# 列出所有本地包pacman -Qn# 列出正则匹配到的包pacman -Qs &amp;lt;regex&amp;gt;# 列出正则匹配到的包，并以特定格式输出(需要`expac`)expac -s">
+<meta name="twitter:title" content="make_your_arch_fonts_beautiful_easily">
+<meta name="twitter:description" content="让你的linux 字体更好看，不用安装 其他工具。安装了多种字体后，qt gtk 以及基于election的程序字体不一致，得一个个去配置。逛reddit看到的一个帖子现在，直接按照如下命令 进行修改，reboot 即可,马上呈现一致的字体(用 lxappearance 不能完全将系统字体进行统一) 。 12345678910111213141516171819202122232425262728">
 
 
 
 
 
 
-  <link rel="canonical" href="http://turbochooo.github.io/2018/04/23/pacman/"/>
+  <link rel="canonical" href="http://turbochooo.github.io/2018/04/25/make-your-arch-fonts-beautiful-easily/"/>
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>pacman | turbochoo's blog</title>
+  <title>make_your_arch_fonts_beautiful_easily | turbochoo's blog</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/23/pacman/">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/25/make-your-arch-fonts-beautiful-easily/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="choo turbo">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">pacman
+          <h1 class="post-title" itemprop="name headline">make_your_arch_fonts_beautiful_easily
               
             
           </h1>
@@ -344,7 +344,7 @@
                 
               
 
-              <time title="Created: 2018-04-23 01:28:34 / Modified: 01:44:39" itemprop="dateCreated datePublished" datetime="2018-04-23T01:28:34+08:00">2018-04-23</time>
+              <time title="Created: 2018-04-25 23:07:25 / Modified: 23:18:23" itemprop="dateCreated datePublished" datetime="2018-04-25T23:07:25+08:00">2018-04-25</time>
             
 
             
@@ -400,10 +400,8 @@
       
 
       
-        <h1 id="arch-常用pacman-命令备忘"><a href="#arch-常用pacman-命令备忘" class="headerlink" title="arch 常用pacman 命令备忘"></a>arch 常用pacman 命令备忘</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 列出已安装包列表</span><br><span class="line">pacman -Qe</span><br><span class="line"><span class="meta">#</span> 列出已安装但不被依赖的包</span><br><span class="line">pacman -Qent</span><br><span class="line"><span class="meta">#</span> 列出手动安装的包</span><br><span class="line">pacman -Qm</span><br><span class="line"><span class="meta">#</span> 列出所有本地包</span><br><span class="line">pacman -Qn</span><br><span class="line"><span class="meta">#</span> 列出正则匹配到的包</span><br><span class="line">pacman -Qs &lt;regex&gt;</span><br><span class="line"><span class="meta">#</span> 列出正则匹配到的包，并以特定格式输出(需要`expac`)</span><br><span class="line">expac -s "%-30n %v" regex</span><br><span class="line"><span class="meta">#</span> 删除孤儿包</span><br><span class="line">pacman -Rns $(pacman -Qtdq)</span><br><span class="line"><span class="meta">#</span> 列出修改过的配置文件（备份用）</span><br><span class="line">pacman -Qii | awk '/^MODIFIED/ &#123;print $2&#125;'</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>来源网络收集</p>
-</blockquote>
+        <h1 id="让你的linux-字体更好看，不用安装-其他工具。"><a href="#让你的linux-字体更好看，不用安装-其他工具。" class="headerlink" title="让你的linux 字体更好看，不用安装 其他工具。"></a>让你的linux 字体更好看，不用安装 其他工具。</h1><p>安装了多种字体后，qt gtk 以及基于election的程序字体不一致，得一个个去配置。逛reddit看到的一个<a href="https://www.reddit.com/r/archlinux/comments/5r5ep8/make_your_arch_fonts_beautiful_easily/" target="_blank" rel="noopener">帖子</a><br>现在，直接按照如下命令 进行修改，reboot 即可,马上呈现一致的字体(用 lxappearance 不能完全将系统字体进行统一) 。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">This is what I do when I install Arch Linux to improve the fonts.</span><br><span class="line"></span><br><span class="line">You may consider the following settings to improve your fonts for system-wide usage without installing a patched font library packages (eg. Infinality):</span><br><span class="line"></span><br><span class="line">Install some fonts, for example:</span><br><span class="line"></span><br><span class="line">sudo pacman -S ttf-dejavu ttf-liberation noto-fonts</span><br><span class="line">Enable font presets by creating symbolic links:</span><br><span class="line"></span><br><span class="line">sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d</span><br><span class="line">sudo ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d</span><br><span class="line">sudo ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d</span><br><span class="line">The above will disable embedded bitmap for all fonts, enable sub-pixel RGB rendering, and enable the LCD filter which is designed to reduce colour fringing when subpixel rendering is used.</span><br><span class="line"></span><br><span class="line">Enable FreeType subpixel hinting mode by editing:</span><br><span class="line"></span><br><span class="line">/etc/profile.d/freetype2.sh</span><br><span class="line">Uncomment the desired mode at the end:</span><br><span class="line"></span><br><span class="line">export FREETYPE_PROPERTIES="truetype:interpreter-version=40"</span><br><span class="line">For font consistency, all applications should be set to use the serif, sans-serif, and monospace aliases, which are mapped to particular fonts by fontconfig.</span><br><span class="line"></span><br><span class="line">Create /etc/fonts/local.conf with following:</span><br><span class="line"></span><br><span class="line">&lt;?xml version="1.0"?&gt;</span><br><span class="line">&lt;!DOCTYPE fontconfig SYSTEM "fonts.dtd"&gt;</span><br><span class="line">&lt;fontconfig&gt;</span><br><span class="line">    &lt;match&gt;</span><br><span class="line">        &lt;edit mode="prepend" name="family"&gt;&lt;string&gt;Noto Sans&lt;/string&gt;&lt;/edit&gt;</span><br><span class="line">    &lt;/match&gt;</span><br><span class="line">    &lt;match target="pattern"&gt;</span><br><span class="line">        &lt;test qual="any" name="family"&gt;&lt;string&gt;serif&lt;/string&gt;&lt;/test&gt;</span><br><span class="line">        &lt;edit name="family" mode="assign" binding="same"&gt;&lt;string&gt;Noto Serif&lt;/string&gt;&lt;/edit&gt;</span><br><span class="line">    &lt;/match&gt;</span><br><span class="line">    &lt;match target="pattern"&gt;</span><br><span class="line">        &lt;test qual="any" name="family"&gt;&lt;string&gt;sans-serif&lt;/string&gt;&lt;/test&gt;</span><br><span class="line">        &lt;edit name="family" mode="assign" binding="same"&gt;&lt;string&gt;Noto Sans&lt;/string&gt;&lt;/edit&gt;</span><br><span class="line">    &lt;/match&gt;</span><br><span class="line">    &lt;match target="pattern"&gt;</span><br><span class="line">        &lt;test qual="any" name="family"&gt;&lt;string&gt;monospace&lt;/string&gt;&lt;/test&gt;</span><br><span class="line">        &lt;edit name="family" mode="assign" binding="same"&gt;&lt;string&gt;Noto Mono&lt;/string&gt;&lt;/edit&gt;</span><br><span class="line">    &lt;/match&gt;</span><br><span class="line">&lt;/fontconfig&gt;</span><br><span class="line">Set your font settings to match above in your DE system settings.</span><br><span class="line"></span><br><span class="line">原</span><br><span class="line"></span><br><span class="line">Note: You can use a font family of your choice, other than Noto fonts.</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -424,9 +422,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/archlinux/" rel="tag"># archlinux</a>
+            <a href="/tags/linux/" rel="tag"># linux</a>
           
-            <a href="/tags/pacman/" rel="tag"># pacman</a>
+            <a href="/tags/arch/" rel="tag"># arch</a>
           
         </div>
       
@@ -439,8 +437,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/22/archlinux-install-3/" rel="next" title="archlinux-install-3">
-                <i class="fa fa-chevron-left"></i> archlinux-install-3
+              <a href="/2018/04/23/docker/" rel="next" title="docker">
+                <i class="fa fa-chevron-left"></i> docker
               </a>
             
           </div>
@@ -448,10 +446,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/23/devops/" rel="prev" title="devops">
-                devops <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -628,7 +622,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#arch-常用pacman-命令备忘"><span class="nav-number">1.</span> <span class="nav-text">arch 常用pacman 命令备忘</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#让你的linux-字体更好看，不用安装-其他工具。"><span class="nav-number">1.</span> <span class="nav-text">让你的linux 字体更好看，不用安装 其他工具。</span></a></li></ol></div>
             
 
           </div>

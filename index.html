@@ -299,6 +299,165 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/25/make-your-arch-fonts-beautiful-easily/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="choo turbo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="turbochoo's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/25/make-your-arch-fonts-beautiful-easily/" itemprop="url">
+                  make_your_arch_fonts_beautiful_easily
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-04-25 23:07:25 / Modified: 23:18:23" itemprop="dateCreated datePublished" datetime="2018-04-25T23:07:25+08:00">2018-04-25</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="让你的linux-字体更好看，不用安装-其他工具。"><a href="#让你的linux-字体更好看，不用安装-其他工具。" class="headerlink" title="让你的linux 字体更好看，不用安装 其他工具。"></a>让你的linux 字体更好看，不用安装 其他工具。</h1><p>安装了多种字体后，qt gtk 以及基于election的程序字体不一致，得一个个去配置。逛reddit看到的一个<a href="https://www.reddit.com/r/archlinux/comments/5r5ep8/make_your_arch_fonts_beautiful_easily/" target="_blank" rel="noopener">帖子</a><br>现在，直接按照如下命令 进行修改，reboot 即可,马上呈现一致的字体(用 lxappearance 不能完全将系统字体进行统一) 。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">This is what I do when I install Arch Linux to improve the fonts.</span><br><span class="line"></span><br><span class="line">You may consider the following settings to improve your fonts for system-wide usage without installing a patched font library packages (eg. Infinality):</span><br><span class="line"></span><br><span class="line">Install some fonts, for example:</span><br><span class="line"></span><br><span class="line">sudo pacman -S ttf-dejavu ttf-liberation noto-fonts</span><br><span class="line">Enable font presets by creating symbolic links:</span><br><span class="line"></span><br><span class="line">sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d</span><br><span class="line">sudo ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d</span><br><span class="line">sudo ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d</span><br><span class="line">The above will disable embedded bitmap for all fonts, enable sub-pixel RGB rendering, and enable the LCD filter which is designed to reduce colour fringing when subpixel rendering is used.</span><br><span class="line"></span><br><span class="line">Enable FreeType subpixel hinting mode by editing:</span><br><span class="line"></span><br><span class="line">/etc/profile.d/freetype2.sh</span><br><span class="line">Uncomment the desired mode at the end:</span><br><span class="line"></span><br><span class="line">export FREETYPE_PROPERTIES="truetype:interpreter-version=40"</span><br><span class="line">For font consistency, all applications should be set to use the serif, sans-serif, and monospace aliases, which are mapped to particular fonts by fontconfig.</span><br><span class="line"></span><br><span class="line">Create /etc/fonts/local.conf with following:</span><br><span class="line"></span><br><span class="line">&lt;?xml version="1.0"?&gt;</span><br><span class="line">&lt;!DOCTYPE fontconfig SYSTEM "fonts.dtd"&gt;</span><br><span class="line">&lt;fontconfig&gt;</span><br><span class="line">    &lt;match&gt;</span><br><span class="line">        &lt;edit mode="prepend" name="family"&gt;&lt;string&gt;Noto Sans&lt;/string&gt;&lt;/edit&gt;</span><br><span class="line">    &lt;/match&gt;</span><br><span class="line">    &lt;match target="pattern"&gt;</span><br><span class="line">        &lt;test qual="any" name="family"&gt;&lt;string&gt;serif&lt;/string&gt;&lt;/test&gt;</span><br><span class="line">        &lt;edit name="family" mode="assign" binding="same"&gt;&lt;string&gt;Noto Serif&lt;/string&gt;&lt;/edit&gt;</span><br><span class="line">    &lt;/match&gt;</span><br><span class="line">    &lt;match target="pattern"&gt;</span><br><span class="line">        &lt;test qual="any" name="family"&gt;&lt;string&gt;sans-serif&lt;/string&gt;&lt;/test&gt;</span><br><span class="line">        &lt;edit name="family" mode="assign" binding="same"&gt;&lt;string&gt;Noto Sans&lt;/string&gt;&lt;/edit&gt;</span><br><span class="line">    &lt;/match&gt;</span><br><span class="line">    &lt;match target="pattern"&gt;</span><br><span class="line">        &lt;test qual="any" name="family"&gt;&lt;string&gt;monospace&lt;/string&gt;&lt;/test&gt;</span><br><span class="line">        &lt;edit name="family" mode="assign" binding="same"&gt;&lt;string&gt;Noto Mono&lt;/string&gt;&lt;/edit&gt;</span><br><span class="line">    &lt;/match&gt;</span><br><span class="line">&lt;/fontconfig&gt;</span><br><span class="line">Set your font settings to match above in your DE system settings.</span><br><span class="line"></span><br><span class="line">原</span><br><span class="line"></span><br><span class="line">Note: You can use a font family of your choice, other than Noto fonts.</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/23/docker/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1614,7 +1773,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1670,7 +1829,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">12</span>
+                      
+                    
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
