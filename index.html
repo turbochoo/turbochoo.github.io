@@ -299,6 +299,195 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/26/shell-syntax/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="choo turbo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="turbochoo's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/26/shell-syntax/" itemprop="url">
+                  shell_syntax
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-04-26 17:36:52 / Modified: 18:10:58" itemprop="dateCreated datePublished" datetime="2018-04-26T17:36:52+08:00">2018-04-26</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/shell/" itemprop="url" rel="index"><span itemprop="name">shell</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="shell-语法"><a href="#shell-语法" class="headerlink" title="shell 语法"></a>shell 语法</h1><p>基本的就不提了，包括文件开头需要标识 #!/usr/bin/sh,sh 会链接到你系统默认的脚本解析器,例如 bash, zsh 还是csh,<br>等其他。一般大部分服务器我们用的是bash。下面以 <strong>4.4</strong> 版本语法为主</p>
+<h2 id="1-变量"><a href="#1-变量" class="headerlink" title="1. 变量"></a>1. 变量</h2><blockquote>
+<p>变量 可以在 带双引号的语句中使用,但不能在单引号使用。</p>
+<ul>
+<li>特殊变量：<ul>
+<li>$#  <strong>当前文件接收到的变量 总数</strong></li>
+<li>$?  <strong>表示最近上个命令运行结果返回的整数码，一般成功为0， 失败为非零</strong></li>
+<li>$1…$n <strong>当前文件接收到的变量，从左向右排列</strong></li>
+<li>$0 <strong>当前文件名</strong><br>-</li>
+</ul>
+</li>
+<li>普通变量：<ul>
+<li>除了特殊变量，用户合法定义的变量</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="2-语句"><a href="#2-语句" class="headerlink" title="2. 语句"></a>2. 语句</h2><ul>
+<li><p>if</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if [ condition ];then</span><br><span class="line">  statement</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>for</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for variable in iteration;do</span><br><span class="line">  statement</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>while</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while [ condition ]; do</span><br><span class="line">  statement</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<p>-</p>
+<h2 id="3-函数"><a href="#3-函数" class="headerlink" title="3. 函数"></a>3. 函数</h2></li>
+<li>函数定义<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">functionname ()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>shell 语法相对简单，待补充….</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/25/make-your-arch-fonts-beautiful-easily/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1773,7 +1962,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1792,7 +1981,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -1831,7 +2022,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
