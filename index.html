@@ -345,7 +345,7 @@
                 
               
 
-              <time title="Created: 2018-05-01 22:26:43 / Modified: 22:33:37" itemprop="dateCreated datePublished" datetime="2018-05-01T22:26:43+08:00">2018-05-01</time>
+              <time title="Created: 2018-05-01 22:26:43 / Modified: 22:40:38" itemprop="dateCreated datePublished" datetime="2018-05-01T22:26:43+08:00">2018-05-01</time>
             
 
             
@@ -404,7 +404,7 @@
         
           
             <h1 id="g-pic-参数"><a href="#g-pic-参数" class="headerlink" title="g++ pic 参数"></a>g++ pic 参数</h1><h2 id="今天用g-编译一个qt5小程序-发现报错"><a href="#今天用g-编译一个qt5小程序-发现报错" class="headerlink" title="今天用g++编译一个qt5小程序 发现报错"></a>今天用g++编译一个qt5小程序 发现报错</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> In file included from /usr/include/qt/QtGui/qtguiglobal.h:43:0,</span><br><span class="line">                 from /usr/include/qt/QtWidgets/qtwidgetsglobal.h:43,</span><br><span class="line">                 from /usr/include/qt/QtWidgets/qapplication.h:43,</span><br><span class="line">                 from /usr/include/qt/QtWidgets/QApplication:1,</span><br><span class="line">                 from helloqt.cpp:9:</span><br><span class="line">/usr/include/qt/QtCore/qglobal.h:1162:4: error: #error "You must build your code with position independent code if Qt was built with -reduce-relocations. " "Compile your code with -fPIC (-fPIE is not enough)."</span><br><span class="line"><span class="meta"> #</span>  error "You must build your code with position independent code if Qt was built with -reduce-relocations. "\</span><br></pre></td></tr></table></figure>
-<p>得加上 fPIC 方得通过，然后再google 看到一个法国小哥的文章了解 <a href="https://mropert.github.io/2018/02/02/pic_pie_sanitizers/" target="_blank" rel="noopener">pic_pie_sanitizers</a>, mark </p>
+<p>得加上 fPIC 方得通过，然后再google 看到一个法国小哥的文章了解 <a href="https://mropert.github.io/2018/02/02/pic_pie_sanitizers/" target="_blank" rel="noopener">pic_pie_sanitizers</a>, mark<br>edit: 通过 <a href="http://www.kaizou.org/2015/01/linux-libraries/" target="_blank" rel="noopener">linux-libraries</a></p>
 
           
         
