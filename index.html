@@ -299,6 +299,339 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/05/01/ipc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="choo turbo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="turbochoo's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/01/ipc/" itemprop="url">
+                  ipc
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-05-01 22:26:43 / Modified: 22:33:37" itemprop="dateCreated datePublished" datetime="2018-05-01T22:26:43+08:00">2018-05-01</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/c/" itemprop="url" rel="index"><span itemprop="name">c++</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="g-pic-参数"><a href="#g-pic-参数" class="headerlink" title="g++ pic 参数"></a>g++ pic 参数</h1><h2 id="今天用g-编译一个qt5小程序-发现报错"><a href="#今天用g-编译一个qt5小程序-发现报错" class="headerlink" title="今天用g++编译一个qt5小程序 发现报错"></a>今天用g++编译一个qt5小程序 发现报错</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> In file included from /usr/include/qt/QtGui/qtguiglobal.h:43:0,</span><br><span class="line">                 from /usr/include/qt/QtWidgets/qtwidgetsglobal.h:43,</span><br><span class="line">                 from /usr/include/qt/QtWidgets/qapplication.h:43,</span><br><span class="line">                 from /usr/include/qt/QtWidgets/QApplication:1,</span><br><span class="line">                 from helloqt.cpp:9:</span><br><span class="line">/usr/include/qt/QtCore/qglobal.h:1162:4: error: #error "You must build your code with position independent code if Qt was built with -reduce-relocations. " "Compile your code with -fPIC (-fPIE is not enough)."</span><br><span class="line"><span class="meta"> #</span>  error "You must build your code with position independent code if Qt was built with -reduce-relocations. "\</span><br></pre></td></tr></table></figure>
+<p>得加上 fPIC 方得通过，然后再google 看到一个法国小哥的文章了解 <a href="https://mropert.github.io/2018/02/02/pic_pie_sanitizers/" target="_blank" rel="noopener">pic_pie_sanitizers</a>, mark </p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/28/vim/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="choo turbo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="turbochoo's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/28/vim/" itemprop="url">
+                  vim
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-04-28 17:58:28" itemprop="dateCreated datePublished" datetime="2018-04-28T17:58:28+08:00">2018-04-28</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-01 22:34:15" itemprop="dateModified" datetime="2018-05-01T22:34:15+08:00">2018-05-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/editor/" itemprop="url" rel="index"><span itemprop="name">editor</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="vim-常用插件"><a href="#vim-常用插件" class="headerlink" title="vim 常用插件"></a>vim 常用插件</h1><ul>
+<li>cscope/ctags</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line">Plug 'vim-airline/vim-airline'</span><br><span class="line">Plug 'vim-airline/vim-airline-themes'</span><br><span class="line">Plug 'airblade/vim-gitgutter'</span><br><span class="line">Plug 'morhetz/gruvbox'</span><br><span class="line"></span><br><span class="line"><span class="string">" &#125;&#125;&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" navigation&#123;&#123;&#123;</span><br><span class="line">Plug 'scrooloose/nerdtree'</span><br><span class="line">Plug 'Xuyuanp/nerdtree-git-plugin'</span><br><span class="line">Plug 'wesleyche/SrcExpl'</span><br><span class="line">Plug 'majutsushi/tagbar'</span><br><span class="line">Plug 'kien/ctrlp.vim'</span><br><span class="line"><span class="string">" &#125;&#125;&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" completion/templating &#123;&#123;&#123;</span><br><span class="line"></span><br><span class="line">Plug 'autozimu/LanguageClient-neovim', &#123;</span><br><span class="line">    \ 'branch': 'next',</span><br><span class="line">    \ 'do': 'bash install.sh',</span><br><span class="line">    \ &#125;</span><br><span class="line"></span><br><span class="line">Plug 'roxma/nvim-completion-manager'</span><br><span class="line">if !has('nvim')</span><br><span class="line">Plug 'roxma/vim-hug-neovim-rpc'</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Plug 'jiangmiao/auto-pairs'</span><br><span class="line">Plug 'scrooloose/nerdcommenter'</span><br><span class="line">Plug 'SirVer/ultisnips'</span><br><span class="line">Plug 'honza/vim-snippets'</span><br><span class="line"></span><br><span class="line"><span class="string">" &#125;&#125;&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" command extention &#123;&#123;&#123;</span><br><span class="line"></span><br><span class="line">Plug 'easymotion/vim-easymotion'</span><br><span class="line">Plug 'junegunn/vim-easy-align'</span><br><span class="line">Plug 'terryma/vim-multiple-cursors'</span><br><span class="line">Plug 'tpope/vim-surround'</span><br><span class="line">Plug 'tpope/vim-repeat'</span><br><span class="line"></span><br><span class="line">Plug 'haya14busa/incsearch.vim'</span><br><span class="line">Plug 'haya14busa/incsearch-fuzzy.vim'</span><br><span class="line">Plug 'haya14busa/incsearch-easymotion.vim'</span><br><span class="line"></span><br><span class="line"><span class="string">" &#125;&#125;&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" language support &#123;&#123;&#123;</span><br><span class="line"></span><br><span class="line"><span class="string">" html/css &#123;&#123;&#123;</span></span><br><span class="line"><span class="string">Plug 'mattn/emmet-vim'</span></span><br><span class="line">" &#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">" c/c++</span></span><br><span class="line"><span class="string">Plug 'roxma/ncm-clang'</span></span><br><span class="line"><span class="string">Plug 'Rip-Rip/clang_complete'</span></span><br><span class="line">" go</span><br><span class="line">Plug 'fatih/vim-go'   </span><br><span class="line"><span class="string">" gdb</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Plug 'Shougo/vimproc.vim', &#123;'do' : 'make'&#125;</span></span><br><span class="line"><span class="string">Plug 'idanarye/vim-vebugger'</span></span><br><span class="line">" java</span><br><span class="line">Plug 'artur-shaik/vim-javacomplete2'</span><br><span class="line"></span><br><span class="line"><span class="string">" python &#123;&#123;&#123;</span></span><br><span class="line"><span class="string">Plug 'jmcantrell/vim-virtualenv'</span></span><br><span class="line"><span class="string">Plug 'davidhalter/jedi-vim'</span></span><br><span class="line"><span class="string">Plug 'hynek/vim-python-pep8-indent'</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" &#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">"php &#123;&#123;&#123;</span></span><br><span class="line">" should install composer</span><br><span class="line"><span class="string">" http://kushellig.de/neovim-php-ide/</span></span><br><span class="line"><span class="string">Plug 'phpactor/phpactor', &#123;'do': 'composer install'&#125;</span></span><br><span class="line"><span class="string">Plug 'roxma/ncm-phpactor'</span></span><br><span class="line">"&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">" syntax checking &#123;&#123;&#123;</span></span><br><span class="line"><span class="string">Plug 'w0rp/ale'</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" &#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">" documentation &#123;&#123;&#123;</span></span><br><span class="line">" LaTeX</span><br><span class="line">Plug 'lervag/vimtex'</span><br><span class="line">Plug 'LaTeX-Box-Team/LaTeX-Box'</span><br><span class="line"></span><br><span class="line"><span class="string">" Markdown syntax highlighting for Vim</span></span><br><span class="line"><span class="string">Plug 'godlygeek/tabular'</span></span><br><span class="line"><span class="string">Plug 'gabrielelana/vim-markdown'</span></span><br><span class="line"><span class="string">Plug 'rhysd/nyaovim-markdown-preview'</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" &#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">" utils&#123;&#123;&#123;</span></span><br><span class="line"><span class="string">Plug 'sjl/gundo.vim'</span></span><br><span class="line">" scratchpad</span><br><span class="line">Plug 'metakirby5/codi.vim'</span><br><span class="line">Plug 'mattn/webapi-vim'</span><br><span class="line">Plug 'mattn/gist-vim'</span><br><span class="line"><span class="string">" &#125;&#125;&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" misc &#123;&#123;&#123;</span><br><span class="line">Plug 'kassio/neoterm'</span><br><span class="line">Plug 'janko-m/vim-test'</span><br><span class="line">Plug 'tpope/vim-dispatch'</span><br><span class="line"><span class="string">" Testing Vimscript with Vader.vim</span></span><br><span class="line"><span class="string">Plug 'junegunn/vader.vim'</span></span><br><span class="line"><span class="string">Plug 'thinca/vim-quickrun'</span></span><br><span class="line"><span class="string">Plug 'aperezdc/vim-template'</span></span><br><span class="line">" &#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>具体 放在github 上</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/26/shell-syntax/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1736,192 +2069,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/21/git-ignore-patterns/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="choo turbo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="turbochoo's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/21/git-ignore-patterns/" itemprop="url">
-                  .gitignore whilelist patterns
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-04-21 18:22:31" itemprop="dateCreated datePublished" datetime="2018-04-21T18:22:31+08:00">2018-04-21</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-04-22 20:03:54" itemprop="dateModified" datetime="2018-04-22T20:03:54+08:00">2018-04-22</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>#使用场景<br>当有时候需要提交某些文档或代码到git上，其他忽略不提交，这时候白名单机制就用得上了。比如，一个项目project，如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ll</span><br><span class="line">total 12</span><br><span class="line">drwxr-xr-x 2 turbo users 4096 Apr 22 16:13 exclude_folder/</span><br><span class="line">drwxr-xr-x 2 turbo users 4096 Apr 22 16:13 include_folder/</span><br><span class="line">-rw-r--r-- 1 turbo users    0 Apr 22 16:12 exclude_file</span><br><span class="line">-rw-r--r-- 1 turbo users    7 Apr 22 16:12 include_file</span><br></pre></td></tr></table></figure>
-<p>需要将include_file文件以及include_folder下所有文件放到git里面，其他排除（exclude_folder， exclude_file），.gitignore 文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>排除所有</span><br><span class="line">/*</span><br><span class="line"><span class="meta">#</span>反选     </span><br><span class="line">!/include_folder/**</span><br><span class="line">!include_file</span><br><span class="line">!.gitignore</span><br></pre></td></tr></table></figure>
-<p>注意：.gitignore文件得加上。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>git status                                            </span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">No commits yet</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use "git add &lt;file&gt;..." to include in what will be committed)</span><br><span class="line"></span><br><span class="line">	.gitignore</span><br><span class="line">	include_file</span><br><span class="line">	include_folder/</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present (use "git add" to track)</span><br></pre></td></tr></table></figure></p>
-<p>可以看到， git 只会添加 include_file文件与include_folder目录。</p>
-<p>好了，我们先来了解 gitignore这个文件的语法,跟正则语法类似<br>，这边只说下该场景用到的标识：</p>
-<ol>
-<li>#开头为注释</li>
-<li>!开头标识非，gitignore文件本身也是非的意思，所以该行就是一条白名单规则</li>
-<li>*<em> 标识为匹配目录下所有目录跟文件，单个</em>标识为单层目录</li>
-<li>/为目录分割符</li>
-</ol>
-<p><a href="http://git-scm.com/docs/gitignore" target="_blank" rel="noopener">具体参考git官方文档</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1962,7 +2116,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1983,7 +2137,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -2024,7 +2182,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">14</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

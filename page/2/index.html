@@ -105,7 +105,7 @@
   <meta name="keywords" content="python dotfiles c++ devops">
 <meta property="og:type" content="website">
 <meta property="og:title" content="turbochoo&#39;s blog">
-<meta property="og:url" content="http://turbochooo.github.io/tags/c/index.html">
+<meta property="og:url" content="http://turbochooo.github.io/page/2/index.html">
 <meta property="og:site_name" content="turbochoo&#39;s blog">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
@@ -116,7 +116,7 @@
 
 
 
-  <link rel="canonical" href="http://turbochooo.github.io/tags/c/"/>
+  <link rel="canonical" href="http://turbochooo.github.io/page/2/"/>
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>Tag: c++ | turbochoo's blog</title>
+  <title>turbochoo's blog</title>
   
 
 
@@ -173,7 +173,8 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -229,7 +230,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
   </li>
@@ -258,28 +259,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -303,83 +282,198 @@
           
           <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
 
   
   
   
-  <div class="post-block tag">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>c++<small>Tag</small>
-        </h1>
-      </div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/21/git-ignore-patterns/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="choo turbo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="turbochoo's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/21/git-ignore-patterns/" itemprop="url">
+                  .gitignore whilelist patterns
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-04-21 18:22:31" itemprop="dateCreated datePublished" datetime="2018-04-21T18:22:31+08:00">2018-04-21</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-04-22 20:03:54" itemprop="dateModified" datetime="2018-04-22T20:03:54+08:00">2018-04-22</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
 
       
         
+          
+            <p>#使用场景<br>当有时候需要提交某些文档或代码到git上，其他忽略不提交，这时候白名单机制就用得上了。比如，一个项目project，如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ll</span><br><span class="line">total 12</span><br><span class="line">drwxr-xr-x 2 turbo users 4096 Apr 22 16:13 exclude_folder/</span><br><span class="line">drwxr-xr-x 2 turbo users 4096 Apr 22 16:13 include_folder/</span><br><span class="line">-rw-r--r-- 1 turbo users    0 Apr 22 16:12 exclude_file</span><br><span class="line">-rw-r--r-- 1 turbo users    7 Apr 22 16:12 include_file</span><br></pre></td></tr></table></figure>
+<p>需要将include_file文件以及include_folder下所有文件放到git里面，其他排除（exclude_folder， exclude_file），.gitignore 文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>排除所有</span><br><span class="line">/*</span><br><span class="line"><span class="meta">#</span>反选     </span><br><span class="line">!/include_folder/**</span><br><span class="line">!include_file</span><br><span class="line">!.gitignore</span><br></pre></td></tr></table></figure>
+<p>注意：.gitignore文件得加上。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>git status                                            </span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">No commits yet</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use "git add &lt;file&gt;..." to include in what will be committed)</span><br><span class="line"></span><br><span class="line">	.gitignore</span><br><span class="line">	include_file</span><br><span class="line">	include_folder/</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present (use "git add" to track)</span><br></pre></td></tr></table></figure></p>
+<p>可以看到， git 只会添加 include_file文件与include_folder目录。</p>
+<p>好了，我们先来了解 gitignore这个文件的语法,跟正则语法类似<br>，这边只说下该场景用到的标识：</p>
+<ol>
+<li>#开头为注释</li>
+<li>!开头标识非，gitignore文件本身也是非的意思，所以该行就是一条白名单规则</li>
+<li>*<em> 标识为匹配目录下所有目录跟文件，单个</em>标识为单层目录</li>
+<li>/为目录分割符</li>
+</ol>
+<p><a href="http://git-scm.com/docs/gitignore" target="_blank" rel="noopener">具体参考git官方文档</a></p>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
+          
         
-            <a class="post-title-link" href="/2018/05/01/ipc/" itemprop="url">
-              
-                <span itemprop="name">ipc</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-01T22:26:43+08:00"
-              content="2018-05-01" >
-          05-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/22/archlinux-install-3/" itemprop="url">
-              
-                <span itemprop="name">archlinux-install-3</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-22T23:17:00+08:00"
-              content="2018-04-22" >
-          04-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
   
   
   
+  </article>
+
+
+    
+  </section>
 
   
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>

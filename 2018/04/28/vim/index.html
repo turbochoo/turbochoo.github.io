@@ -102,25 +102,25 @@
 
 
 
-  <meta name="description" content="how to install archlinux development enviroment - part3  开发环境依赖图形界面，请先参考图形界面配置篇 一、 c++环境  1sudo pacman -S clang cmake 二、python环境  1sudo pacman -S ipython python-virtualenv python-virtualenvwrapper pyt">
-<meta name="keywords" content="archlinux,c++,python">
+  <meta name="description" content="vim 常用插件 cscope/ctags  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293">
+<meta name="keywords" content="vim,editor">
 <meta property="og:type" content="article">
-<meta property="og:title" content="archlinux-install-3">
-<meta property="og:url" content="http://turbochooo.github.io/2018/04/22/archlinux-install-3/index.html">
+<meta property="og:title" content="vim">
+<meta property="og:url" content="http://turbochooo.github.io/2018/04/28/vim/index.html">
 <meta property="og:site_name" content="turbochoo&#39;s blog">
-<meta property="og:description" content="how to install archlinux development enviroment - part3  开发环境依赖图形界面，请先参考图形界面配置篇 一、 c++环境  1sudo pacman -S clang cmake 二、python环境  1sudo pacman -S ipython python-virtualenv python-virtualenvwrapper pyt">
+<meta property="og:description" content="vim 常用插件 cscope/ctags  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-23T14:37:14.905Z">
+<meta property="og:updated_time" content="2018-05-01T14:34:15.918Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="archlinux-install-3">
-<meta name="twitter:description" content="how to install archlinux development enviroment - part3  开发环境依赖图形界面，请先参考图形界面配置篇 一、 c++环境  1sudo pacman -S clang cmake 二、python环境  1sudo pacman -S ipython python-virtualenv python-virtualenvwrapper pyt">
+<meta name="twitter:title" content="vim">
+<meta name="twitter:description" content="vim 常用插件 cscope/ctags  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293">
 
 
 
 
 
 
-  <link rel="canonical" href="http://turbochooo.github.io/2018/04/22/archlinux-install-3/"/>
+  <link rel="canonical" href="http://turbochooo.github.io/2018/04/28/vim/"/>
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>archlinux-install-3 | turbochoo's blog</title>
+  <title>vim | turbochoo's blog</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/22/archlinux-install-3/">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/28/vim/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="choo turbo">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">archlinux-install-3
+          <h1 class="post-title" itemprop="name headline">vim
               
             
           </h1>
@@ -344,7 +344,7 @@
                 
               
 
-              <time title="Created: 2018-04-22 23:17:00" itemprop="dateCreated datePublished" datetime="2018-04-22T23:17:00+08:00">2018-04-22</time>
+              <time title="Created: 2018-04-28 17:58:28" itemprop="dateCreated datePublished" datetime="2018-04-28T17:58:28+08:00">2018-04-28</time>
             
 
             
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-04-23 22:37:14" itemprop="dateModified" datetime="2018-04-23T22:37:14+08:00">2018-04-23</time>
+                <time title="Modified: 2018-05-01 22:34:15" itemprop="dateModified" datetime="2018-05-01T22:34:15+08:00">2018-05-01</time>
               
             
           </span>
@@ -378,7 +378,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/editor/" itemprop="url" rel="index"><span itemprop="name">editor</span></a></span>
 
                 
                 
@@ -412,25 +412,11 @@
       
 
       
-        <h1 id="how-to-install-archlinux-development-enviroment-part3"><a href="#how-to-install-archlinux-development-enviroment-part3" class="headerlink" title="how to install archlinux development enviroment - part3"></a>how to install archlinux development enviroment - part3</h1><p>  开发环境依赖图形界面，请先参考<a href="/2018/04/22/archlinux-install-2/" title="图形界面">图形界面配置篇</a></p>
-<h1 id="一、-c-环境"><a href="#一、-c-环境" class="headerlink" title="一、 c++环境"></a>一、 c++环境</h1>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S clang cmake</span><br></pre></td></tr></table></figure>
-<h1 id="二、python环境"><a href="#二、python环境" class="headerlink" title="二、python环境"></a>二、python环境</h1>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S ipython python-virtualenv python-virtualenvwrapper python-pip yapf python-pylint</span><br></pre></td></tr></table></figure>
-<h1 id="三、web开发环境"><a href="#三、web开发环境" class="headerlink" title="三、web开发环境"></a>三、web开发环境</h1>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S nodejs</span><br></pre></td></tr></table></figure>
-<pre><code>nodejs 是事件驱动、非阻塞 I/O 模型，它适合于实时 web 应用。
-平常就折腾下web应用。
-</code></pre><h1 id="四、虚拟环境"><a href="#四、虚拟环境" class="headerlink" title="四、虚拟环境"></a>四、虚拟环境</h1>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="五、编辑器-or-IDE"><a href="#五、编辑器-or-IDE" class="headerlink" title="五、编辑器 or IDE"></a>五、编辑器 or IDE</h1><ol>
-<li>Neovim 听说比vim7快很多</li>
-<li>spacemacs  现代的emacs</li>
-<li>geany 用于日常txt文档编辑</li>
-<li>atom  插件支持丰富，跟vscode一个类型</li>
-<li>vscode 常用于 python c++，插件很好用</li>
-<li>qtcreator c++ qtide工具<ol>
-<li>得配置下环境<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  1) Install qt5ct</span><br><span class="line"></span><br><span class="line">2) Set environment variables in /etc/environment and add the following lines:</span><br><span class="line"></span><br><span class="line">export QT_QPA_PLATFORMTHEME=qt5ct</span><br><span class="line"></span><br><span class="line">export QT_AUTO_SCREEN_SCALE_FACTOR=0</span><br><span class="line"></span><br><span class="line">3) Restart the system</span><br><span class="line"></span><br><span class="line">4) Start qt5ct</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-</ol>
+        <h1 id="vim-常用插件"><a href="#vim-常用插件" class="headerlink" title="vim 常用插件"></a>vim 常用插件</h1><ul>
+<li>cscope/ctags</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line">Plug 'vim-airline/vim-airline'</span><br><span class="line">Plug 'vim-airline/vim-airline-themes'</span><br><span class="line">Plug 'airblade/vim-gitgutter'</span><br><span class="line">Plug 'morhetz/gruvbox'</span><br><span class="line"></span><br><span class="line"><span class="string">" &#125;&#125;&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" navigation&#123;&#123;&#123;</span><br><span class="line">Plug 'scrooloose/nerdtree'</span><br><span class="line">Plug 'Xuyuanp/nerdtree-git-plugin'</span><br><span class="line">Plug 'wesleyche/SrcExpl'</span><br><span class="line">Plug 'majutsushi/tagbar'</span><br><span class="line">Plug 'kien/ctrlp.vim'</span><br><span class="line"><span class="string">" &#125;&#125;&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" completion/templating &#123;&#123;&#123;</span><br><span class="line"></span><br><span class="line">Plug 'autozimu/LanguageClient-neovim', &#123;</span><br><span class="line">    \ 'branch': 'next',</span><br><span class="line">    \ 'do': 'bash install.sh',</span><br><span class="line">    \ &#125;</span><br><span class="line"></span><br><span class="line">Plug 'roxma/nvim-completion-manager'</span><br><span class="line">if !has('nvim')</span><br><span class="line">Plug 'roxma/vim-hug-neovim-rpc'</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Plug 'jiangmiao/auto-pairs'</span><br><span class="line">Plug 'scrooloose/nerdcommenter'</span><br><span class="line">Plug 'SirVer/ultisnips'</span><br><span class="line">Plug 'honza/vim-snippets'</span><br><span class="line"></span><br><span class="line"><span class="string">" &#125;&#125;&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" command extention &#123;&#123;&#123;</span><br><span class="line"></span><br><span class="line">Plug 'easymotion/vim-easymotion'</span><br><span class="line">Plug 'junegunn/vim-easy-align'</span><br><span class="line">Plug 'terryma/vim-multiple-cursors'</span><br><span class="line">Plug 'tpope/vim-surround'</span><br><span class="line">Plug 'tpope/vim-repeat'</span><br><span class="line"></span><br><span class="line">Plug 'haya14busa/incsearch.vim'</span><br><span class="line">Plug 'haya14busa/incsearch-fuzzy.vim'</span><br><span class="line">Plug 'haya14busa/incsearch-easymotion.vim'</span><br><span class="line"></span><br><span class="line"><span class="string">" &#125;&#125;&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" language support &#123;&#123;&#123;</span><br><span class="line"></span><br><span class="line"><span class="string">" html/css &#123;&#123;&#123;</span></span><br><span class="line"><span class="string">Plug 'mattn/emmet-vim'</span></span><br><span class="line">" &#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">" c/c++</span></span><br><span class="line"><span class="string">Plug 'roxma/ncm-clang'</span></span><br><span class="line"><span class="string">Plug 'Rip-Rip/clang_complete'</span></span><br><span class="line">" go</span><br><span class="line">Plug 'fatih/vim-go'   </span><br><span class="line"><span class="string">" gdb</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Plug 'Shougo/vimproc.vim', &#123;'do' : 'make'&#125;</span></span><br><span class="line"><span class="string">Plug 'idanarye/vim-vebugger'</span></span><br><span class="line">" java</span><br><span class="line">Plug 'artur-shaik/vim-javacomplete2'</span><br><span class="line"></span><br><span class="line"><span class="string">" python &#123;&#123;&#123;</span></span><br><span class="line"><span class="string">Plug 'jmcantrell/vim-virtualenv'</span></span><br><span class="line"><span class="string">Plug 'davidhalter/jedi-vim'</span></span><br><span class="line"><span class="string">Plug 'hynek/vim-python-pep8-indent'</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" &#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">"php &#123;&#123;&#123;</span></span><br><span class="line">" should install composer</span><br><span class="line"><span class="string">" http://kushellig.de/neovim-php-ide/</span></span><br><span class="line"><span class="string">Plug 'phpactor/phpactor', &#123;'do': 'composer install'&#125;</span></span><br><span class="line"><span class="string">Plug 'roxma/ncm-phpactor'</span></span><br><span class="line">"&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">" syntax checking &#123;&#123;&#123;</span></span><br><span class="line"><span class="string">Plug 'w0rp/ale'</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" &#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">" documentation &#123;&#123;&#123;</span></span><br><span class="line">" LaTeX</span><br><span class="line">Plug 'lervag/vimtex'</span><br><span class="line">Plug 'LaTeX-Box-Team/LaTeX-Box'</span><br><span class="line"></span><br><span class="line"><span class="string">" Markdown syntax highlighting for Vim</span></span><br><span class="line"><span class="string">Plug 'godlygeek/tabular'</span></span><br><span class="line"><span class="string">Plug 'gabrielelana/vim-markdown'</span></span><br><span class="line"><span class="string">Plug 'rhysd/nyaovim-markdown-preview'</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" &#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">" utils&#123;&#123;&#123;</span></span><br><span class="line"><span class="string">Plug 'sjl/gundo.vim'</span></span><br><span class="line">" scratchpad</span><br><span class="line">Plug 'metakirby5/codi.vim'</span><br><span class="line">Plug 'mattn/webapi-vim'</span><br><span class="line">Plug 'mattn/gist-vim'</span><br><span class="line"><span class="string">" &#125;&#125;&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">" misc &#123;&#123;&#123;</span><br><span class="line">Plug 'kassio/neoterm'</span><br><span class="line">Plug 'janko-m/vim-test'</span><br><span class="line">Plug 'tpope/vim-dispatch'</span><br><span class="line"><span class="string">" Testing Vimscript with Vader.vim</span></span><br><span class="line"><span class="string">Plug 'junegunn/vader.vim'</span></span><br><span class="line"><span class="string">Plug 'thinca/vim-quickrun'</span></span><br><span class="line"><span class="string">Plug 'aperezdc/vim-template'</span></span><br><span class="line">" &#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>具体 放在github 上</p>
 
       
     </div>
@@ -451,11 +437,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/archlinux/" rel="tag"># archlinux</a>
+            <a href="/tags/vim/" rel="tag"># vim</a>
           
-            <a href="/tags/c/" rel="tag"># c++</a>
-          
-            <a href="/tags/python/" rel="tag"># python</a>
+            <a href="/tags/editor/" rel="tag"># editor</a>
           
         </div>
       
@@ -468,8 +452,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/22/archlinux-install-2/" rel="next" title="archlinux-install-2">
-                <i class="fa fa-chevron-left"></i> archlinux-install-2
+              <a href="/2018/04/26/shell-syntax/" rel="next" title="shell_syntax">
+                <i class="fa fa-chevron-left"></i> shell_syntax
               </a>
             
           </div>
@@ -478,8 +462,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/23/pacman/" rel="prev" title="pacman">
-                pacman <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/01/ipc/" rel="prev" title="ipc">
+                ipc <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -671,7 +655,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#how-to-install-archlinux-development-enviroment-part3"><span class="nav-number">1.</span> <span class="nav-text">how to install archlinux development enviroment - part3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一、-c-环境"><span class="nav-number">2.</span> <span class="nav-text">一、 c++环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、python环境"><span class="nav-number">3.</span> <span class="nav-text">二、python环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、web开发环境"><span class="nav-number">4.</span> <span class="nav-text">三、web开发环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、虚拟环境"><span class="nav-number">5.</span> <span class="nav-text">四、虚拟环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、编辑器-or-IDE"><span class="nav-number">6.</span> <span class="nav-text">五、编辑器 or IDE</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vim-常用插件"><span class="nav-number">1.</span> <span class="nav-text">vim 常用插件</span></a></li></ol></div>
             
 
           </div>
