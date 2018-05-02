@@ -345,7 +345,7 @@
                 
               
 
-              <time title="Created: 2018-05-02 09:39:36 / Modified: 09:41:37" itemprop="dateCreated datePublished" datetime="2018-05-02T09:39:36+08:00">2018-05-02</time>
+              <time title="Created: 2018-05-02 09:39:36 / Modified: 23:00:03" itemprop="dateCreated datePublished" datetime="2018-05-02T09:39:36+08:00">2018-05-02</time>
             
 
             
@@ -403,7 +403,21 @@
       
         
           
-            <h1 id="gdb-调试-coredump-的常用命令"><a href="#gdb-调试-coredump-的常用命令" class="headerlink" title="gdb 调试 coredump 的常用命令"></a>gdb 调试 coredump 的常用命令</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">bt 查看当前线程的调用栈</span><br><span class="line"></span><br><span class="line">bt full 查看详细的调用栈</span><br><span class="line"></span><br><span class="line">info threads 可以查看所有线程的信息</span><br><span class="line"></span><br><span class="line">thread &lt;num&gt; 可以具体跳转到某个线程</span><br><span class="line"></span><br><span class="line">f &lt;num&gt; 可以跳转到某个栈中位置</span><br><span class="line"></span><br><span class="line">i locals 显示当前调用栈的所有变量</span><br><span class="line"></span><br><span class="line">i register 显示当前调用栈的寄存器值，主要是查看地址</span><br><span class="line"></span><br><span class="line">有了这些命令的帮助我们可以从core dump 的文件里面分析出很多问题。</span><br></pre></td></tr></table></figure>
+            <h1 id="gdb-调试-coredump"><a href="#gdb-调试-coredump" class="headerlink" title="gdb 调试 coredump"></a>gdb 调试 coredump</h1><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">bt 查看当前线程的调用栈</span><br><span class="line"></span><br><span class="line">bt full 查看详细的调用栈</span><br><span class="line"></span><br><span class="line">info threads 可以查看所有线程的信息</span><br><span class="line"></span><br><span class="line">thread &lt;num&gt; 可以具体跳转到某个线程</span><br><span class="line"></span><br><span class="line">f &lt;num&gt; 可以跳转到某个栈中位置</span><br><span class="line"></span><br><span class="line">i locals 显示当前调用栈的所有变量</span><br><span class="line"></span><br><span class="line">i register 显示当前调用栈的寄存器值，主要是查看地址</span><br><span class="line"></span><br><span class="line">有了这些命令的帮助我们可以从core dump 的文件里面分析出很多问题。</span><br></pre></td></tr></table></figure>
+<h2 id="archlinux-coredump-文件"><a href="#archlinux-coredump-文件" class="headerlink" title="archlinux coredump 文件"></a>archlinux coredump 文件</h2><p>系统将 coredump 文件 统一 放在</p>
+<blockquote>
+<p>/var/lib/systemd/coredump</p>
+</blockquote>
+<p>比如 program.out 出现<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">segmentation fault (core dumped)</span><br></pre></td></tr></table></figure></p>
+<p>定位步骤如下：</p>
+<ol>
+<li>查找 cordump 的程序： coredumpctl list | grep program.out</li>
+<li>确认coredump程序：coredumpctl info match<blockquote>
+<p>match 可以为 programname or pid之类的</p>
+</blockquote>
+</li>
+</ol>
+<p>3.进入调试,打印backtrace：  coredumpctl gdb match<br>  (gdb)</p>
 
           
         
