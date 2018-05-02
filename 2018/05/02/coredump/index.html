@@ -102,21 +102,25 @@
 
 
 
-  <meta name="keywords" content="python dotfiles c++ devops">
-<meta property="og:type" content="website">
-<meta property="og:title" content="turbochoo&#39;s blog">
-<meta property="og:url" content="http://turbochooo.github.io/categories/c/index.html">
+  <meta name="description" content="gdb 调试 coredump 的常用命令123456789101112131415bt 查看当前线程的调用栈bt full 查看详细的调用栈info threads 可以查看所有线程的信息thread &amp;lt;num&amp;gt; 可以具体跳转到某个线程f &amp;lt;num&amp;gt; 可以跳转到某个栈中位置i locals 显示当前调用栈的所有变量i register 显示当前调用栈的寄存器值，主要是查看">
+<meta name="keywords" content="core dump,gdb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="coredump">
+<meta property="og:url" content="http://turbochooo.github.io/2018/05/02/coredump/index.html">
 <meta property="og:site_name" content="turbochoo&#39;s blog">
+<meta property="og:description" content="gdb 调试 coredump 的常用命令123456789101112131415bt 查看当前线程的调用栈bt full 查看详细的调用栈info threads 可以查看所有线程的信息thread &amp;lt;num&amp;gt; 可以具体跳转到某个线程f &amp;lt;num&amp;gt; 可以跳转到某个栈中位置i locals 显示当前调用栈的所有变量i register 显示当前调用栈的寄存器值，主要是查看">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-02T01:41:37.133Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="turbochoo&#39;s blog">
+<meta name="twitter:title" content="coredump">
+<meta name="twitter:description" content="gdb 调试 coredump 的常用命令123456789101112131415bt 查看当前线程的调用栈bt full 查看详细的调用栈info threads 可以查看所有线程的信息thread &amp;lt;num&amp;gt; 可以具体跳转到某个线程f &amp;lt;num&amp;gt; 可以跳转到某个栈中位置i locals 显示当前调用栈的所有变量i register 显示当前调用栈的寄存器值，主要是查看">
 
 
 
 
 
 
-  <link rel="canonical" href="http://turbochooo.github.io/categories/c/"/>
+  <link rel="canonical" href="http://turbochooo.github.io/2018/05/02/coredump/"/>
 
 
 
@@ -126,7 +130,7 @@
   };
 </script>
 
-  <title>Category: c++ | turbochoo's blog</title>
+  <title>coredump | turbochoo's blog</title>
   
 
 
@@ -173,7 +177,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,7 +241,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories</a>
   </li>
@@ -257,28 +261,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -304,59 +286,193 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>c++<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/05/02/coredump/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="choo turbo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="turbochoo's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/05/01/ipc/" itemprop="url">
-              
-                <span itemprop="name">ipc</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">coredump
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-01T22:26:43+08:00"
-              content="2018-05-01" >
-          05-01
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-05-02 09:39:36 / Modified: 09:41:37" itemprop="dateCreated datePublished" datetime="2018-05-02T09:39:36+08:00">2018-05-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/c-c/" itemprop="url" rel="index"><span itemprop="name">c/c++</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="gdb-调试-coredump-的常用命令"><a href="#gdb-调试-coredump-的常用命令" class="headerlink" title="gdb 调试 coredump 的常用命令"></a>gdb 调试 coredump 的常用命令</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">bt 查看当前线程的调用栈</span><br><span class="line"></span><br><span class="line">bt full 查看详细的调用栈</span><br><span class="line"></span><br><span class="line">info threads 可以查看所有线程的信息</span><br><span class="line"></span><br><span class="line">thread &lt;num&gt; 可以具体跳转到某个线程</span><br><span class="line"></span><br><span class="line">f &lt;num&gt; 可以跳转到某个栈中位置</span><br><span class="line"></span><br><span class="line">i locals 显示当前调用栈的所有变量</span><br><span class="line"></span><br><span class="line">i register 显示当前调用栈的寄存器值，主要是查看地址</span><br><span class="line"></span><br><span class="line">有了这些命令的帮助我们可以从core dump 的文件里面分析出很多问题。</span><br></pre></td></tr></table></figure>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/core-dump/" rel="tag"># core dump</a>
+          
+            <a href="/tags/gdb/" rel="tag"># gdb</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/01/ipc/" rel="next" title="ipc">
+                <i class="fa fa-chevron-left"></i> ipc
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -377,8 +493,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -393,7 +518,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -465,7 +590,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">17</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -500,6 +629,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#gdb-调试-coredump-的常用命令"><span class="nav-number">1.</span> <span class="nav-text">gdb 调试 coredump 的常用命令</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -627,6 +772,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
+
+
 
   
 

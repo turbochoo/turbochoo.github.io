@@ -299,6 +299,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/05/02/coredump/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="choo turbo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="turbochoo's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/02/coredump/" itemprop="url">
+                  coredump
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-05-02 09:39:36 / Modified: 09:41:37" itemprop="dateCreated datePublished" datetime="2018-05-02T09:39:36+08:00">2018-05-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/c-c/" itemprop="url" rel="index"><span itemprop="name">c/c++</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="gdb-调试-coredump-的常用命令"><a href="#gdb-调试-coredump-的常用命令" class="headerlink" title="gdb 调试 coredump 的常用命令"></a>gdb 调试 coredump 的常用命令</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">bt 查看当前线程的调用栈</span><br><span class="line"></span><br><span class="line">bt full 查看详细的调用栈</span><br><span class="line"></span><br><span class="line">info threads 可以查看所有线程的信息</span><br><span class="line"></span><br><span class="line">thread &lt;num&gt; 可以具体跳转到某个线程</span><br><span class="line"></span><br><span class="line">f &lt;num&gt; 可以跳转到某个栈中位置</span><br><span class="line"></span><br><span class="line">i locals 显示当前调用栈的所有变量</span><br><span class="line"></span><br><span class="line">i register 显示当前调用栈的寄存器值，主要是查看地址</span><br><span class="line"></span><br><span class="line">有了这些命令的帮助我们可以从core dump 的文件里面分析出很多问题。</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/05/01/ipc/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -345,12 +503,24 @@
                 
               
 
-              <time title="Created: 2018-05-01 22:26:43 / Modified: 22:40:38" itemprop="dateCreated datePublished" datetime="2018-05-01T22:26:43+08:00">2018-05-01</time>
+              <time title="Created: 2018-05-01 22:26:43" itemprop="dateCreated datePublished" datetime="2018-05-01T22:26:43+08:00">2018-05-01</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-02 09:40:51" itemprop="dateModified" datetime="2018-05-02T09:40:51+08:00">2018-05-02</time>
               
             
           </span>
@@ -367,7 +537,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/c/" itemprop="url" rel="index"><span itemprop="name">c++</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/c-c/" itemprop="url" rel="index"><span itemprop="name">c/c++</span></a></span>
 
                 
                 
@@ -1840,235 +2010,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/22/archlinux-install/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="choo turbo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="turbochoo's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/22/archlinux-install/" itemprop="url">
-                  archlinux-install
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-04-22 20:05:07" itemprop="dateCreated datePublished" datetime="2018-04-22T20:05:07+08:00">2018-04-22</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-04-23 00:36:06" itemprop="dateModified" datetime="2018-04-23T00:36:06+08:00">2018-04-23</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="how-to-install-archlinux-development-enviroment-part1"><a href="#how-to-install-archlinux-development-enviroment-part1" class="headerlink" title="how to install archlinux development enviroment - part1"></a>how to install archlinux development enviroment - part1</h1><p>参考了archlinux 官网、各路大神等的配置，定制化了适合自己的开发环境。记录下,方便以后回顾。用了多年的macAIR发热量大的，让x240重新生, 安装完后居然温度稳定在49~54度，一点都不烫手，性能表现不错，很满意(thinkpad 跟linux 绝配)！</p>
-<h2 id="硬件配置如下："><a href="#硬件配置如下：" class="headerlink" title="硬件配置如下："></a>硬件配置如下：</h2><ul>
-<li>thinkpadx240</li>
-<li>8G ram</li>
-<li>250G ssd</li>
-</ul>
-<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
-<li>用于c++、java开发以及python等web开发</li>
-<li>搭配ssr酸酸乳进行科学上网</li>
-<li>实现休眠<br>-</li>
-</ul>
-<h2 id="基础安装"><a href="#基础安装" class="headerlink" title="基础安装"></a>基础安装</h2><p>  首先从官网下载 iso，校验sha1值，然后写入u盘(个人喜欢<strong>Easy2Boot</strong> 这个工具，直接copy进去即可)，设置u盘启动，进入命令行安装界面。接下来的这边列出关键步骤，具体看 <a href="https://wiki.archlinux.org/index.php/installation_guide" target="_blank" rel="noopener">安装指南</a></p>
-<ol>
-<li><p>分区 选择需要安装的目标盘，划分如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span></span><br><span class="line">fdisk /dev/sda</span><br><span class="line"></span><br><span class="line">分区      | 容量 | 说明</span><br><span class="line">----------|------|-----------------------</span><br><span class="line">/         | 80G  | 根分区</span><br><span class="line">/boot     | 256M | 启动分区</span><br><span class="line">/home     | 100G | 普通用户   </span><br><span class="line">swap 分区  | 8G   | 根据内存大小去设置</span><br><span class="line">/data     | 35G  | 可选，用于放文件，或测试数据</span><br></pre></td></tr></table></figure>
-<p><strong>注意</strong>：</p>
-<ul>
-<li>/boot 分区得标识为 boot flag , 后面会安装grub到该分区。</li>
-<li>除了wap分区得设置格式为83，其他默认84。</li>
-</ul>
-</li>
-<li><p>设置、挂载分区</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>设置 swap分区，并启用</span><br><span class="line">  mkwap /dev/sda2 &amp;&amp; swapon /dev/sda2</span><br><span class="line"><span class="meta">#</span> 设置分区ext4 格式， n 代表各个分区id</span><br><span class="line">  mkfs.ext4 /dev/sda&#123;n&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> mount disk partitions</span><br><span class="line">mount /dev/sda1 /mnt</span><br><span class="line">mkdir /mnt/home</span><br><span class="line">mount /dev/sda2 /mnt/home</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装base package，我用的是wifi所以，先通过<strong>wifi-menu</strong>命令启用网络,确保能访问到外网。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacstrap /mnt base base-devel git vim dialog iw wpa_supplicant  fakeroot jshon expac openssh zsh sudo wget make autoconf automake patch</span><br></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li>dialog iw wpa_supplicant 用于启动后方便设置网络</li>
-<li>zsh 这个好用过bash</li>
-<li>vim 方便命令行对文件进行编辑，习惯了vim（系统自带默认nano）</li>
-<li>openssh 这个就不用说了，远程必备</li>
-<li>git、make、gdb、autoconf、automake、patch 必备</li>
-</ul>
-</blockquote>
-<ol start="4">
-<li><p>上述准备好后，切换root &amp; install grub2 &amp; reboot</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">arch-chroot /mnt /bin/bash</span><br><span class="line">pacman -S grub</span><br><span class="line">grub-mkconfig -o /boot/grub/grub.cfg</span><br><span class="line">grub-install --recheck /dev/sda</span><br><span class="line">exit</span><br><span class="line">umount /mnt/&#123;home,data&#125;</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启后，系统基本可用了，接下来就是安装软件与配置：<br>设置root passwd,hostname,keymap、locale <a href="https://wiki.archlinux.org/index.php/Arch_Linux_Localization_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87" target="_blank" rel="noopener">中文环境设置参考</a>、timezone、时间同步等。</p>
-</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl set-hostname arch</span><br><span class="line">localectl set-keymap us</span><br><span class="line"><span class="meta">#</span> 打开 文件 /etc/locale.gen uncomment zh_CN.UTF-8</span><br><span class="line">localectl set-locale LANG=en_US.UTF-8</span><br><span class="line">locale-gen</span><br><span class="line">timedatectl set-timezone Asia/Shanghai</span><br><span class="line">hwclock --systohc --utc</span><br><span class="line">timedatectl set-ntp true</span><br></pre></td></tr></table></figure>
-<ol start="6">
-<li><p>添加普通用户用于日常：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">useradd -m -g users -s /usr/bin/zsh username</span><br><span class="line">passwd username</span><br><span class="line"><span class="meta">#</span>再设置该用户username, visudo,方便执行root级别命令。</span><br><span class="line"><span class="meta">#</span>再重新以该普通用户进行relogin.</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过wifi-menu 进行网络连接，再次更新软件包：</p>
-</li>
-</ol>
-<ul>
-<li>先设置国内镜像，这样比较快 /etc/pacman.d/mirrorlist,启用几个国内的url，比如163等。</li>
-<li>设置 添加 /etc/pacman.conf<br>打开 multilib 项<br>添加archlinuxcn 源</li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[archlinuxcn]</span></span><br><span class="line"><span class="string">SigLevel</span> <span class="string">=</span> <span class="string">Optional</span> <span class="string">TrustedOnly</span></span><br><span class="line"><span class="string">Server</span> <span class="string">=</span> <span class="attr">http://mirrors.163.com/archlinux-cn/$arch</span></span><br></pre></td></tr></table></figure>
-<p>更新，并安装 archlinuxcn keyring </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Syu</span><br><span class="line">sudo pacman -S multilib-devel archlinuxcn-keyring</span><br></pre></td></tr></table></figure>
-<p>到这一步系统基本已经安装好。接下来进入 <a href="/2018/04/22/archlinux-install-2/" title="图形界面篇">图形界面篇</a></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2116,7 +2057,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2188,7 +2129,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">17</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
