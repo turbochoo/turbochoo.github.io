@@ -102,25 +102,25 @@
 
 
 
-  <meta name="description" content="让你的linux 字体更好看，不用安装 其他工具。安装了多种字体后，qt gtk 以及基于election的程序字体不一致，得一个个去配置。逛reddit看到的一个帖子现在，直接按照如下命令 进行修改，reboot 即可,马上呈现一致的字体(用 lxappearance 不能完全将系统字体进行统一) 。 12345678910111213141516171819202122232425262728">
-<meta name="keywords" content="linux,arch">
+  <meta name="description" content="解决 nginx is forbidden (13: Permission denied) 问题隔了好多年，今天再次搭建LNMP(linux + nginx + php + mariadb)环境 居然遇到 403问题，记录下: 1. 背景：让nginx支持php  单独新建php.conf，如下  1234567 location ~ .php$ &amp;#123;#fastcgi_pass 127.0">
+<meta name="keywords" content="nginx,[object Object]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="make_your_arch_fonts_beautiful_easily">
-<meta property="og:url" content="http://turbochooo.github.io/2018/04/25/make-your-arch-fonts-beautiful-easily/index.html">
+<meta property="og:title" content="nginx-13-Permission-denied">
+<meta property="og:url" content="http://turbochooo.github.io/2018/05/04/nginx-13-Permission-denied/index.html">
 <meta property="og:site_name" content="turbochoo&#39;s blog">
-<meta property="og:description" content="让你的linux 字体更好看，不用安装 其他工具。安装了多种字体后，qt gtk 以及基于election的程序字体不一致，得一个个去配置。逛reddit看到的一个帖子现在，直接按照如下命令 进行修改，reboot 即可,马上呈现一致的字体(用 lxappearance 不能完全将系统字体进行统一) 。 12345678910111213141516171819202122232425262728">
+<meta property="og:description" content="解决 nginx is forbidden (13: Permission denied) 问题隔了好多年，今天再次搭建LNMP(linux + nginx + php + mariadb)环境 居然遇到 403问题，记录下: 1. 背景：让nginx支持php  单独新建php.conf，如下  1234567 location ~ .php$ &amp;#123;#fastcgi_pass 127.0">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-25T15:18:23.132Z">
+<meta property="og:updated_time" content="2018-05-04T08:14:54.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="make_your_arch_fonts_beautiful_easily">
-<meta name="twitter:description" content="让你的linux 字体更好看，不用安装 其他工具。安装了多种字体后，qt gtk 以及基于election的程序字体不一致，得一个个去配置。逛reddit看到的一个帖子现在，直接按照如下命令 进行修改，reboot 即可,马上呈现一致的字体(用 lxappearance 不能完全将系统字体进行统一) 。 12345678910111213141516171819202122232425262728">
+<meta name="twitter:title" content="nginx-13-Permission-denied">
+<meta name="twitter:description" content="解决 nginx is forbidden (13: Permission denied) 问题隔了好多年，今天再次搭建LNMP(linux + nginx + php + mariadb)环境 居然遇到 403问题，记录下: 1. 背景：让nginx支持php  单独新建php.conf，如下  1234567 location ~ .php$ &amp;#123;#fastcgi_pass 127.0">
 
 
 
 
 
 
-  <link rel="canonical" href="http://turbochooo.github.io/2018/04/25/make-your-arch-fonts-beautiful-easily/"/>
+  <link rel="canonical" href="http://turbochooo.github.io/2018/05/04/nginx-13-Permission-denied/"/>
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>make_your_arch_fonts_beautiful_easily | turbochoo's blog</title>
+  <title>nginx-13-Permission-denied | turbochoo's blog</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/25/make-your-arch-fonts-beautiful-easily/">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/05/04/nginx-13-Permission-denied/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="choo turbo">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">make_your_arch_fonts_beautiful_easily
+          <h1 class="post-title" itemprop="name headline">nginx-13-Permission-denied
               
             
           </h1>
@@ -344,7 +344,7 @@
                 
               
 
-              <time title="Created: 2018-04-25 23:07:25 / Modified: 23:18:23" itemprop="dateCreated datePublished" datetime="2018-04-25T23:07:25+08:00">2018-04-25</time>
+              <time title="Created: 2018-05-04 15:25:51 / Modified: 16:14:54" itemprop="dateCreated datePublished" datetime="2018-05-04T15:25:51+08:00">2018-05-04</time>
             
 
             
@@ -400,8 +400,30 @@
       
 
       
-        <h1 id="让你的linux-字体更好看，不用安装-其他工具。"><a href="#让你的linux-字体更好看，不用安装-其他工具。" class="headerlink" title="让你的linux 字体更好看，不用安装 其他工具。"></a>让你的linux 字体更好看，不用安装 其他工具。</h1><p>安装了多种字体后，qt gtk 以及基于election的程序字体不一致，得一个个去配置。逛reddit看到的一个<a href="https://www.reddit.com/r/archlinux/comments/5r5ep8/make_your_arch_fonts_beautiful_easily/" target="_blank" rel="noopener">帖子</a><br>现在，直接按照如下命令 进行修改，reboot 即可,马上呈现一致的字体(用 lxappearance 不能完全将系统字体进行统一) 。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">This is what I do when I install Arch Linux to improve the fonts.</span><br><span class="line"></span><br><span class="line">You may consider the following settings to improve your fonts for system-wide usage without installing a patched font library packages (eg. Infinality):</span><br><span class="line"></span><br><span class="line">Install some fonts, for example:</span><br><span class="line"></span><br><span class="line">sudo pacman -S ttf-dejavu ttf-liberation noto-fonts</span><br><span class="line">Enable font presets by creating symbolic links:</span><br><span class="line"></span><br><span class="line">sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d</span><br><span class="line">sudo ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d</span><br><span class="line">sudo ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d</span><br><span class="line">The above will disable embedded bitmap for all fonts, enable sub-pixel RGB rendering, and enable the LCD filter which is designed to reduce colour fringing when subpixel rendering is used.</span><br><span class="line"></span><br><span class="line">Enable FreeType subpixel hinting mode by editing:</span><br><span class="line"></span><br><span class="line">/etc/profile.d/freetype2.sh</span><br><span class="line">Uncomment the desired mode at the end:</span><br><span class="line"></span><br><span class="line">export FREETYPE_PROPERTIES="truetype:interpreter-version=40"</span><br><span class="line">For font consistency, all applications should be set to use the serif, sans-serif, and monospace aliases, which are mapped to particular fonts by fontconfig.</span><br><span class="line"></span><br><span class="line">Create /etc/fonts/local.conf with following:</span><br><span class="line"></span><br><span class="line">&lt;?xml version="1.0"?&gt;</span><br><span class="line">&lt;!DOCTYPE fontconfig SYSTEM "fonts.dtd"&gt;</span><br><span class="line">&lt;fontconfig&gt;</span><br><span class="line">    &lt;match&gt;</span><br><span class="line">        &lt;edit mode="prepend" name="family"&gt;&lt;string&gt;Noto Sans&lt;/string&gt;&lt;/edit&gt;</span><br><span class="line">    &lt;/match&gt;</span><br><span class="line">    &lt;match target="pattern"&gt;</span><br><span class="line">        &lt;test qual="any" name="family"&gt;&lt;string&gt;serif&lt;/string&gt;&lt;/test&gt;</span><br><span class="line">        &lt;edit name="family" mode="assign" binding="same"&gt;&lt;string&gt;Noto Serif&lt;/string&gt;&lt;/edit&gt;</span><br><span class="line">    &lt;/match&gt;</span><br><span class="line">    &lt;match target="pattern"&gt;</span><br><span class="line">        &lt;test qual="any" name="family"&gt;&lt;string&gt;sans-serif&lt;/string&gt;&lt;/test&gt;</span><br><span class="line">        &lt;edit name="family" mode="assign" binding="same"&gt;&lt;string&gt;Noto Sans&lt;/string&gt;&lt;/edit&gt;</span><br><span class="line">    &lt;/match&gt;</span><br><span class="line">    &lt;match target="pattern"&gt;</span><br><span class="line">        &lt;test qual="any" name="family"&gt;&lt;string&gt;monospace&lt;/string&gt;&lt;/test&gt;</span><br><span class="line">        &lt;edit name="family" mode="assign" binding="same"&gt;&lt;string&gt;Noto Mono&lt;/string&gt;&lt;/edit&gt;</span><br><span class="line">    &lt;/match&gt;</span><br><span class="line">&lt;/fontconfig&gt;</span><br><span class="line">Set your font settings to match above in your DE system settings.</span><br><span class="line"></span><br><span class="line">原</span><br><span class="line"></span><br><span class="line">Note: You can use a font family of your choice, other than Noto fonts.</span><br></pre></td></tr></table></figure>
+        <h1 id="解决-nginx-is-forbidden-13-Permission-denied-问题"><a href="#解决-nginx-is-forbidden-13-Permission-denied-问题" class="headerlink" title="解决 nginx is forbidden (13: Permission denied) 问题"></a>解决 nginx is forbidden (13: Permission denied) 问题</h1><p>隔了好多年，今天再次搭建LNMP(linux + nginx + php + mariadb)环境 居然遇到 403问题，记录下:</p>
+<h1 id="1-背景：让nginx支持php"><a href="#1-背景：让nginx支持php" class="headerlink" title="1. 背景：让nginx支持php"></a>1. 背景：让nginx支持php</h1><p>  单独新建php.conf，如下<br>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> location ~ .php$ &#123;</span><br><span class="line"><span class="meta">#</span>fastcgi_pass 127.0.0.1:9000;</span><br><span class="line">   fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;</span><br><span class="line">   fastcgi_index index.php;</span><br><span class="line">   fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;</span><br><span class="line">   include fastcgi_params;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>放到 /etc/nginx/default.d/目录<br>然后 修改/etc/nginx/nginx.conf 默认 server 段<br>root 配置项下 添加，注释原来的<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include /etc/nginx/default.d/*.conf;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include /etc/nginx/default.d/php.conf;</span><br></pre></td></tr></table></figure>
+<p>重启 nginx</p>
+<blockquote>
+<p> systemctl restart nginx</p>
+</blockquote>
+<p>发现 访问 php是可以解析正确的.</p>
+<h1 id="2-统一nginx-跟php-fpm-跟-root目录权限"><a href="#2-统一nginx-跟php-fpm-跟-root目录权限" class="headerlink" title="2. 统一nginx 跟php-fpm 跟 root目录权限"></a>2. 统一nginx 跟php-fpm 跟 root目录权限</h1><p>打算使用了2个子域名配置两个server ，重启 访问网站，以下两个问题就出现了:</p>
+<ol>
+<li>FastCGI sent in stderr: “Primary script unknown” while reading response header from upstream</li>
+<li>indx.php is forbidden (13: Permission denied)</li>
+</ol>
+<p>查看 nginx user是用nginx 的，而 php-fpm 是用apache, 站点目录是root的，所以统一下<br>使用 nginx用户跟组的 权限:</p>
+<ul>
+<li>nginx.conf</li>
+<li>/etc/php-fpm.d/<a href="http://www.conf" target="_blank" rel="noopener">www.conf</a></li>
+<li>网站目录： chown -R nginx:nginx /data/<a href="http://www.xxx.com" target="_blank" rel="noopener">www.xxx.com</a></li>
+</ul>
+<p>改了后，重启nginx跟 php-fpm, 第一个问题解决，第二个问题还是出现。</p>
+<h1 id="3-SELINUX-开关"><a href="#3-SELINUX-开关" class="headerlink" title="3. SELINUX 开关"></a>3. SELINUX 开关</h1><p>再次查看了网站的目录跟文件权限 都是可读，应该没问题，感觉应该是系统安全，于是<br>查了 日志 ： tail -f /var/log/audit/audit.log ，内容如下<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type=AVC msg=audit(1525417425.069:54597): avc:  denied  &#123; getattr &#125; for  pid=1358 comm="nginx" path="/data/index.php" dev="vda1" ino=768004 scontext=system_u:system_r:httpd_t:s0 tcontext=unconfined_u:object_r:default_t:s0 tclass=file</span><br><span class="line">type=SYSCALL msg=audit(1525417425.069:54597): arch=c000003e syscall=4 success=no exit=-13 a0=7fe90eceba7a a1=7fff0670a060 a2=7fff0670a060 a3=7fe90edbdf28 items=0 ppid=1357 pid=1358 auid=4294967295 uid=998 gid=997 euid=998 suid=998 fsuid=998 egid=997 sgid=997 fsgid=997 tty=(none) ses=4294967295 comm="nginx" exe="/usr/sbin/nginx" subj=system_u:system_r:httpd_t:s0 key=(null)</span><br><span class="line">type=AVC msg=audit(1525417441.021:54598): avc:  denied  &#123; getattr &#125; for  pid=1358 comm="nginx" path="/data/index.php" dev="vda1" ino=768004 scontext=system_u:system_r:httpd_t:s0 tcontext=unconfined_u:object_r:default_t:s0 tclass=file</span><br></pre></td></tr></table></figure></p>
+<h1 id="4-授权"><a href="#4-授权" class="headerlink" title="4. 授权"></a>4. 授权</h1><p>对网站所在的目录设置正确的权限，<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">chcon -Rt httpd_sys_content_t /data</span><br><span class="line"></span><br><span class="line">ls -Z /data/*</span><br><span class="line">-rw-r--r--. nginx nginx unconfined_u:object_r:httpd_sys_content_t:s0 404.html</span><br><span class="line">-rw-r--r--. nginx nginx unconfined_u:object_r:httpd_sys_content_t:s0 50x.html</span><br><span class="line">-rw-r--r--. nginx nginx unconfined_u:object_r:httpd_sys_content_t:s0 favicon.ico</span><br><span class="line">-rw-r--r--. nginx nginx unconfined_u:object_r:httpd_sys_content_t:s0 index.ph</span><br></pre></td></tr></table></figure></p>
+<p>再次访问 网站正常了<br>注：看到网上的教程直接设置SELINUX=disabled，重启系统。个人感觉系统安全性会降低，不建议这样操作。</p>
 
       
     </div>
@@ -422,9 +444,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
+            <a href="/tags/nginx/" rel="tag"># nginx</a>
           
-            <a href="/tags/arch/" rel="tag"># arch</a>
+            <a href="/tags/object-Object/" rel="tag"># [object Object]</a>
           
         </div>
       
@@ -437,8 +459,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/23/docker/" rel="next" title="docker">
-                <i class="fa fa-chevron-left"></i> docker
+              <a href="/2018/05/02/coredump/" rel="next" title="coredump">
+                <i class="fa fa-chevron-left"></i> coredump
               </a>
             
           </div>
@@ -447,8 +469,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/26/shell-syntax/" rel="prev" title="shell_syntax">
-                shell_syntax <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/04/ssh-connection-block/" rel="prev" title="ssh-connection-block">
+                ssh-connection-block <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -650,7 +672,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#让你的linux-字体更好看，不用安装-其他工具。"><span class="nav-number">1.</span> <span class="nav-text">让你的linux 字体更好看，不用安装 其他工具。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#解决-nginx-is-forbidden-13-Permission-denied-问题"><span class="nav-number">1.</span> <span class="nav-text">解决 nginx is forbidden (13: Permission denied) 问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-背景：让nginx支持php"><span class="nav-number">2.</span> <span class="nav-text">1. 背景：让nginx支持php</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-统一nginx-跟php-fpm-跟-root目录权限"><span class="nav-number">3.</span> <span class="nav-text">2. 统一nginx 跟php-fpm 跟 root目录权限</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-SELINUX-开关"><span class="nav-number">4.</span> <span class="nav-text">3. SELINUX 开关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-授权"><span class="nav-number">5.</span> <span class="nav-text">4. 授权</span></a></li></ol></div>
             
 
           </div>

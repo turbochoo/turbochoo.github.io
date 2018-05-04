@@ -299,6 +299,404 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/22/archlinux-install-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="choo turbo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="turbochoo's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/22/archlinux-install-3/" itemprop="url">
+                  archlinux-install-3
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-04-22 23:17:00" itemprop="dateCreated datePublished" datetime="2018-04-22T23:17:00+08:00">2018-04-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-04-23 22:37:14" itemprop="dateModified" datetime="2018-04-23T22:37:14+08:00">2018-04-23</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="how-to-install-archlinux-development-enviroment-part3"><a href="#how-to-install-archlinux-development-enviroment-part3" class="headerlink" title="how to install archlinux development enviroment - part3"></a>how to install archlinux development enviroment - part3</h1><p>  开发环境依赖图形界面，请先参考<a href="/2018/04/22/archlinux-install-2/" title="图形界面">图形界面配置篇</a></p>
+<h1 id="一、-c-环境"><a href="#一、-c-环境" class="headerlink" title="一、 c++环境"></a>一、 c++环境</h1>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S clang cmake</span><br></pre></td></tr></table></figure>
+<h1 id="二、python环境"><a href="#二、python环境" class="headerlink" title="二、python环境"></a>二、python环境</h1>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S ipython python-virtualenv python-virtualenvwrapper python-pip yapf python-pylint</span><br></pre></td></tr></table></figure>
+<h1 id="三、web开发环境"><a href="#三、web开发环境" class="headerlink" title="三、web开发环境"></a>三、web开发环境</h1>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S nodejs</span><br></pre></td></tr></table></figure>
+<pre><code>nodejs 是事件驱动、非阻塞 I/O 模型，它适合于实时 web 应用。
+平常就折腾下web应用。
+</code></pre><h1 id="四、虚拟环境"><a href="#四、虚拟环境" class="headerlink" title="四、虚拟环境"></a>四、虚拟环境</h1>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="五、编辑器-or-IDE"><a href="#五、编辑器-or-IDE" class="headerlink" title="五、编辑器 or IDE"></a>五、编辑器 or IDE</h1><ol>
+<li>Neovim 听说比vim7快很多</li>
+<li>spacemacs  现代的emacs</li>
+<li>geany 用于日常txt文档编辑</li>
+<li>atom  插件支持丰富，跟vscode一个类型</li>
+<li>vscode 常用于 python c++，插件很好用</li>
+<li>qtcreator c++ qtide工具<ol>
+<li>得配置下环境<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  1) Install qt5ct</span><br><span class="line"></span><br><span class="line">2) Set environment variables in /etc/environment and add the following lines:</span><br><span class="line"></span><br><span class="line">export QT_QPA_PLATFORMTHEME=qt5ct</span><br><span class="line"></span><br><span class="line">export QT_AUTO_SCREEN_SCALE_FACTOR=0</span><br><span class="line"></span><br><span class="line">3) Restart the system</span><br><span class="line"></span><br><span class="line">4) Start qt5ct</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/22/archlinux-install-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="choo turbo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="turbochoo's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/22/archlinux-install-2/" itemprop="url">
+                  archlinux-install-2
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-04-22 23:16:55" itemprop="dateCreated datePublished" datetime="2018-04-22T23:16:55+08:00">2018-04-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-04-23 22:19:44" itemprop="dateModified" datetime="2018-04-23T22:19:44+08:00">2018-04-23</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="how-to-install-archlinux-development-enviroment-part2"><a href="#how-to-install-archlinux-development-enviroment-part2" class="headerlink" title="how to install archlinux development enviroment - part2"></a>how to install archlinux development enviroment - part2</h1><p>  安装图像界面的前，请参考<br>  <a href="/2018/04/22/archlinux-install/" title="install-archlinux-part1">基本系统安装篇</a></p>
+<p>  linux 图形界面基本分为gtk跟qt，类似gnome，weightlight 的有lxde、xfce4可供选择。个人偏向tiling<br>  window的manager,以前装过lua写的awesome,后来选择i3，个人感觉i3更好用。</p>
+<h2 id="一、图形涉及的软件包"><a href="#一、图形涉及的软件包" class="headerlink" title="一、图形涉及的软件包"></a>一、图形涉及的软件包</h2><p>  本机使用的intel的芯片 选择 xf86-video-intel，nVidia安装xf86-video-nouveau即可<br>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> sudo pacman -S xorg-server xorg-xinit xorg-server-utils mesa xf86-video-intel opencl-mesa xorg-twm xorg-xclock xorg-xprop xorg-xev xorg-xkill xorg-xfontsel xorg-xcalc redshift xbacklight acpid acpi</span><br></pre></td></tr></table></figure></p>
+<p>  <strong>说明</strong>：</p>
+<blockquote>
+<ol>
+<li>xorg-xev 用于捕获按键的keycode, 方便用于设置key map</li>
+<li>xorg-xprop 用于捕获程序的class name,方便用于设置i3</li>
+</ol>
+</blockquote>
+<h2 id="二、字体、theme"><a href="#二、字体、theme" class="headerlink" title="二、字体、theme"></a>二、字体、theme</h2>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> sudo pacman -S wqy-microhei dina-font ttf-dejavu noto-fonts-emoji nerd-fonts-complete adobe-source-code-pro-fonts</span><br><span class="line"><span class="meta">$</span> sudo pacman -S arc-gtk-theme arc-icon-theme zsh-theme-powerlevel9k</span><br></pre></td></tr></table></figure>
+<p>  <strong>说明</strong>：</p>
+<blockquote>
+<ol>
+<li>arc theme 个人感觉比较清爽</li>
+<li>nerd-fonts-complete、powerlevel9k 主要用于zsh</li>
+<li>启动图形界面的时候加入中文支持，避免乱码(命令行界面支持中文输出安装fbterm)</li>
+<li>推荐 wqy-microhei 作为系统默认字体，谁用谁知道</li>
+</ol>
+</blockquote>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">打开~/.xprofile文件加入以下几行即可，注意文件名称全部是小写的。</span><br><span class="line"></span><br><span class="line">export LANG=en_US.UTF-8</span><br><span class="line">export LANGUAGE=zh_CN:en_US</span><br><span class="line">export LC_CTYPE=zh_CN.UTF-8</span><br></pre></td></tr></table></figure>
+<h2 id="三、基本软件"><a href="#三、基本软件" class="headerlink" title="三、基本软件"></a>三、基本软件</h2><h3 id="1-i3-wm-window-manager"><a href="#1-i3-wm-window-manager" class="headerlink" title="1. i3 wm (window manager)"></a>1. i3 wm (window manager)</h3>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S i3blocks i3-gaps i3lock i3status  ssh-agent gnome-keyring x11-ssh-askpass keychain xautolock compton blueman</span><br><span class="line">cp /etc/X11/xinit/xinitrc ~/.xinitrc</span><br><span class="line">echo 'exec ssh-agent i3 &gt;~/.xsession-errors 2&gt;&amp;1' &gt;&gt; ~/.xinitrc</span><br></pre></td></tr></table></figure>
+<p>  <strong>登录窗口</strong>,我习惯命令行敲入 startx进入。有slim openbox 可选安装</p>
+<h3 id="2-输入法"><a href="#2-输入法" class="headerlink" title="2. 输入法"></a>2. 输入法</h3><pre><code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> sudo pacman -S ibus rime</span><br><span class="line"></span><br><span class="line"><span class="meta"> #</span> 让系统支持中文输入</span><br><span class="line">将以下 放入 ~/.xprofile 文件内                               </span><br><span class="line">export LANG=en_US.UTF-8</span><br><span class="line">export LC_CTYPE=zh_CN.UTF-8</span><br><span class="line"></span><br><span class="line">export XMODIFIERS=@im=IBUS</span><br><span class="line">export GTK_IM_MODULE="ibus"</span><br><span class="line">export QT_IM_MODULE="ibus"</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="3-terminal软件"><a href="#3-terminal软件" class="headerlink" title="3 terminal软件"></a>3 terminal软件</h3><pre><code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S terminator termite xterm rxvt-unicode urxvt-perls</span><br></pre></td></tr></table></figure>
+
+&gt; urxvt 主要用 urxvt 支持tab 很方便
+</code></pre><p><a href="https://github.com/turbochoo/dotfiles/blob/master/.Xresources" target="_blank" rel="noopener">urxvt、xterm配置</a></p>
+<h3 id="4-浏览器"><a href="#4-浏览器" class="headerlink" title="4. 浏览器"></a>4. 浏览器</h3>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- google-chrome</span><br><span class="line">- chromium     目前插件都得通过google 商店，不过科学上网插件得通过开发者模式离线安装</span><br><span class="line">- qutebrowser 以前安装过luakit,源没有了，选择了这款，也是基于快捷键的浏览器,功能强大。还有新出基于electron 轻量化的 min。</span><br><span class="line">-</span><br></pre></td></tr></table></figure>
+<h3 id="5-科学上网"><a href="#5-科学上网" class="headerlink" title="5. 科学上网"></a>5. 科学上网</h3><pre><code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- shadowsocks-qt5</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="6-文档、图片编辑、办公"><a href="#6-文档、图片编辑、办公" class="headerlink" title="6. 文档、图片编辑、办公"></a>6. 文档、图片编辑、办公</h3><pre><code>- feh 命令行查看图片，背景轮播工具
+-  scrot 命令行截图工具
+- ranger 命令行文件管理工具
+- zathura 快捷键方式支持pdf epub 等文档的查看工具
+- ibreoffice-fresh 开源office套件
+- gimp an image manipulation and paint program.
+-
+-
+</code></pre><h3 id="7-娱乐"><a href="#7-娱乐" class="headerlink" title="7.娱乐"></a>7.娱乐</h3><pre><code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- mpd ncmcpp 本地播放音乐，现在一般都是在线播放web音乐 一般使用163。</span><br><span class="line">- mplayer</span><br><span class="line">- electronic-wechat 比网页版强不少</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="8-其他"><a href="#8-其他" class="headerlink" title="8. 其他"></a>8. 其他</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- ntfs-3g 挂载ntfs系统</span><br><span class="line">- pcmanfm  A lightweight Gtk+ based file manager for X Window</span><br><span class="line">- xarchiver-gtk2 GTK+ front end for managing archives</span><br><span class="line">-</span><br></pre></td></tr></table></figure>
+<h3 id="四-截图"><a href="#四-截图" class="headerlink" title="四 截图"></a>四 截图</h3><p>  dirty:<br><img src="https://raw.githubusercontent.com/turbochoo/files/master/2018-04-23-005908_731x433_scrot.png" alt="dirty"><br> clear:<br><img src="https://raw.githubusercontent.com/turbochoo/files/master/2018-04-19-111842_1366x768_scrot.png" alt="clear"></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://turbochooo.github.io/2018/04/22/archlinux-install/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -743,7 +1141,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -819,7 +1217,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">19</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
