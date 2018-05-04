@@ -345,7 +345,7 @@
                 
               
 
-              <time title="Created: 2018-05-04 15:26:16 / Modified: 16:20:35" itemprop="dateCreated datePublished" datetime="2018-05-04T15:26:16+08:00">2018-05-04</time>
+              <time title="Created: 2018-05-04 15:26:16 / Modified: 16:21:43" itemprop="dateCreated datePublished" datetime="2018-05-04T15:26:16+08:00">2018-05-04</time>
             
 
             
@@ -508,7 +508,7 @@
                 
               
 
-              <time title="Created: 2018-05-04 15:25:51 / Modified: 16:14:54" itemprop="dateCreated datePublished" datetime="2018-05-04T15:25:51+08:00">2018-05-04</time>
+              <time title="Created: 2018-05-04 15:25:51 / Modified: 17:40:02" itemprop="dateCreated datePublished" datetime="2018-05-04T15:25:51+08:00">2018-05-04</time>
             
 
             
@@ -587,8 +587,17 @@
 <li>网站目录： chown -R nginx:nginx /data/<a href="http://www.xxx.com" target="_blank" rel="noopener">www.xxx.com</a></li>
 </ul>
 <p>改了后，重启nginx跟 php-fpm, 第一个问题解决，第二个问题还是出现。</p>
-<h1 id="3-SELINUX-开关"><a href="#3-SELINUX-开关" class="headerlink" title="3. SELINUX 开关"></a>3. SELINUX 开关</h1><p>再次查看了网站的目录跟文件权限 都是可读，应该没问题，感觉应该是系统安全，于是<br>查了 日志 ： tail -f /var/log/audit/audit.log ，内容如下<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type=AVC msg=audit(1525417425.069:54597): avc:  denied  &#123; getattr &#125; for  pid=1358 comm="nginx" path="/data/index.php" dev="vda1" ino=768004 scontext=system_u:system_r:httpd_t:s0 tcontext=unconfined_u:object_r:default_t:s0 tclass=file</span><br><span class="line">type=SYSCALL msg=audit(1525417425.069:54597): arch=c000003e syscall=4 success=no exit=-13 a0=7fe90eceba7a a1=7fff0670a060 a2=7fff0670a060 a3=7fe90edbdf28 items=0 ppid=1357 pid=1358 auid=4294967295 uid=998 gid=997 euid=998 suid=998 fsuid=998 egid=997 sgid=997 fsgid=997 tty=(none) ses=4294967295 comm="nginx" exe="/usr/sbin/nginx" subj=system_u:system_r:httpd_t:s0 key=(null)</span><br><span class="line">type=AVC msg=audit(1525417441.021:54598): avc:  denied  &#123; getattr &#125; for  pid=1358 comm="nginx" path="/data/index.php" dev="vda1" ino=768004 scontext=system_u:system_r:httpd_t:s0 tcontext=unconfined_u:object_r:default_t:s0 tclass=file</span><br></pre></td></tr></table></figure></p>
-<h1 id="4-授权"><a href="#4-授权" class="headerlink" title="4. 授权"></a>4. 授权</h1><p>对网站所在的目录设置正确的权限，<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">chcon -Rt httpd_sys_content_t /data</span><br><span class="line"></span><br><span class="line">ls -Z /data/*</span><br><span class="line">-rw-r--r--. nginx nginx unconfined_u:object_r:httpd_sys_content_t:s0 404.html</span><br><span class="line">-rw-r--r--. nginx nginx unconfined_u:object_r:httpd_sys_content_t:s0 50x.html</span><br><span class="line">-rw-r--r--. nginx nginx unconfined_u:object_r:httpd_sys_content_t:s0 favicon.ico</span><br><span class="line">-rw-r--r--. nginx nginx unconfined_u:object_r:httpd_sys_content_t:s0 index.ph</span><br></pre></td></tr></table></figure></p>
+<h1 id="3-SELINUX-开关"><a href="#3-SELINUX-开关" class="headerlink" title="3. SELINUX 开关"></a>3. SELINUX 开关</h1><p>再次查看了网站的目录跟文件权限 都是可读，应该没问题,应该是selinux，于是<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getenforce</span><br></pre></td></tr></table></figure></p>
+<p>返回 Enforcing<br>说明是selinux 启用中</p>
+<p>日志 ： tail -f /var/log/audit/audit.log ，内容如下<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type=AVC msg=audit(1525417425.069:54597): avc:  denied  &#123; getattr &#125; for  pid=1358 comm="nginx" path="/data/index.php" dev="vda1" ino=768004 scontext=system_u:system_r:httpd_t:s0 tcontext=unconfined_u:object_r:default_t:s0 tclass=file</span><br><span class="line">type=SYSCALL msg=audit(1525417425.069:54597): arch=c000003e syscall=4 success=no exit=-13 a0=7fe90eceba7a a1=7fff0670a060 a2=7fff0670a060 a3=7fe90edbdf28 items=0 ppid=1357 pid=1358 auid=4294967295 uid=998 gid=997 euid=998 suid=998 fsuid=998 egid=997 sgid=997 fsgid=997 tty=(none) ses=4294967295 comm="nginx" exe="/usr/sbin/nginx" subj=system_u:system_r:httpd_t:s0 key=(null)</span><br><span class="line">type=AVC msg=audit(1525417441.021:54598): avc:  denied  &#123; getattr &#125; for  pid=1358 comm="nginx" path="/data/index.php" dev="vda1" ino=768004 scontext=system_u:system_r:httpd_t:s0 tcontext=unconfined_u:object_r:default_t:s0 tclass=file</span><br></pre></td></tr></table></figure></p>
+<h1 id="4-授权"><a href="#4-授权" class="headerlink" title="4. 授权"></a>4. 授权</h1><ul>
+<li><p>对网站所在的目录设置正确的权限</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">chcon -Rt httpd_sys_content_t /data</span><br><span class="line"></span><br><span class="line">ls -Z /data/*</span><br><span class="line">-rw-r--r--. nginx nginx unconfined_u:object_r:httpd_sys_content_t:s0 404.html</span><br><span class="line">-rw-r--r--. nginx nginx unconfined_u:object_r:httpd_sys_content_t:s0 50x.html</span><br><span class="line">-rw-r--r--. nginx nginx unconfined_u:object_r:httpd_sys_content_t:s0 favicon.ico</span><br><span class="line">-rw-r--r--. nginx nginx unconfined_u:object_r:httpd_sys_content_t:s0 index.ph</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>也可以通过以下对http全部放开(对我来说授权目录已经够用了，没使用)  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setsebool -P httpd_can_network_connect on</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <p>再次访问 网站正常了<br>注：看到网上的教程直接设置SELINUX=disabled，重启系统。个人感觉系统安全性会降低，不建议这样操作。</p>
 
           
