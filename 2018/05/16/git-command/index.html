@@ -110,7 +110,7 @@
 <meta property="og:site_name" content="turbochoo&#39;s blog">
 <meta property="og:description" content="常用git 命令记录下面例子 以 master 作为主分支hotfix 作为新建的分支名 1.保存用户名跟密码由于有的基于git的项目 只开放密码登录，避免命令行下 每次都输入用户名密码，使用到 git gitcredentials，切换到 当前项目的根目录下，输入以下设置 12git config credential.$&amp;#123;remote&amp;#125;.username youruser">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-16T05:24:41.363Z">
+<meta property="og:updated_time" content="2018-05-16T05:30:13.981Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git-command">
 <meta name="twitter:description" content="常用git 命令记录下面例子 以 master 作为主分支hotfix 作为新建的分支名 1.保存用户名跟密码由于有的基于git的项目 只开放密码登录，避免命令行下 每次都输入用户名密码，使用到 git gitcredentials，切换到 当前项目的根目录下，输入以下设置 12git config credential.$&amp;#123;remote&amp;#125;.username youruser">
@@ -344,7 +344,7 @@
                 
               
 
-              <time title="Created: 2018-05-16 12:04:56 / Modified: 13:24:41" itemprop="dateCreated datePublished" datetime="2018-05-16T12:04:56+08:00">2018-05-16</time>
+              <time title="Created: 2018-05-16 12:04:56 / Modified: 13:30:13" itemprop="dateCreated datePublished" datetime="2018-05-16T12:04:56+08:00">2018-05-16</time>
             
 
             
@@ -407,6 +407,9 @@
 <h2 id="2-分支"><a href="#2-分支" class="headerlink" title="2. 分支"></a>2. 分支</h2><ul>
 <li><p>创建分支</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b hotfix</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发布分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin hotfix</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>切换分支</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
